@@ -33,6 +33,7 @@ use ieee.std_logic_unsigned.all;
 entity mux is
     Port ( a : in  STD_LOGIC_VECTOR(7 downto 0);
            b : in  STD_LOGIC_VECTOR(7 downto 0);
+			  c : in  STD_LOGIC_VECTOR(7 downto 0);
            opt : in  STD_LOGIC_VECTOR(1 downto 0); -- 0 soma 1 subtracao 
            s : out  STD_LOGIC_VECTOR(7 downto 0));
 end mux;
@@ -47,7 +48,7 @@ begin
 			s <= a + b;
 		
 		when "01" =>
-			s <= a - b;
+			s <= a - c;
 		when others => s <= a;
 		
 	end case;
