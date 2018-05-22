@@ -1,0 +1,4 @@
+vhdl isim_temp "register.vhd"
+vhdl isim_temp "mux.vhd"
+vhdl isim_temp "check_menor.vhd"
+vhdl isim_temp "bo.vhd"
