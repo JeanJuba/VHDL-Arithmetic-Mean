@@ -2,9 +2,9 @@
 -- Company: 
 -- Engineer: 
 -- 
--- Create Date:    21:23:43 05/15/2018 
+-- Create Date:    23:24:44 05/22/2018 
 -- Design Name: 
--- Module Name:    check_menor - Behavioral 
+-- Module Name:    alu - Behavioral 
 -- Project Name: 
 -- Target Devices: 
 -- Tool versions: 
@@ -19,6 +19,7 @@
 ----------------------------------------------------------------------------------
 library IEEE;
 use IEEE.STD_LOGIC_1164.ALL;
+use IEEE.STD_LOGIC_UNSIGNED.ALL;
 
 -- Uncomment the following library declaration if using
 -- arithmetic functions with Signed or Unsigned values
@@ -29,18 +30,31 @@ use IEEE.STD_LOGIC_1164.ALL;
 --library UNISIM;
 --use UNISIM.VComponents.all;
 
-entity comparator is
+entity alu is
     Port ( a : in  STD_LOGIC_VECTOR(7 downto 0);
            b : in  STD_LOGIC_VECTOR(7 downto 0);
-           s : out  STD_LOGIC);
-end comparator; 
+           opt : in  STD_LOGIC_VECTOR(1 downto 0);
+           s : out  STD_LOGIC_VECTOR(7 downto 0));
+end alu;
 
-architecture Behavioral of comparator is
+architecture Behavioral of alu is
 
 begin
+process(opt)
+begin 
+	case opt is
+	
+	when "00" =>     --soma
+		s <=  a + b;
+	
+	when "01" =>     --subtrai
+		s <= a - b;
+	
+	when others =>   --faz nada
+		s <= a;
+	
+	end case;
 
-	s <= '1' when b > a else '0'; --Quando b for maior que a a saída é '1' senão '0'
-
-
+end process;
 end Behavioral;
 

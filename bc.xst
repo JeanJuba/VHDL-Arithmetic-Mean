@@ -1,0 +1,5 @@
+set -tmpdir "C:/Users/Usuario/Desktop/calc_media_arit/xst/projnav.tmp"
+set -xsthdpdir "C:/Users/Usuario/Desktop/calc_media_arit/xst"
+elaborate
+-ifn bc.prj
+-ifmt mixed

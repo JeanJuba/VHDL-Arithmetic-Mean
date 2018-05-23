@@ -40,7 +40,7 @@ architecture Behavioral of mux is
 
 begin
 	
-	s <= a when opt = '0' else b;
+	s <= a when opt = '0' else b;  --'0' para escolher a e '1' para escolher b
 
 end Behavioral;
 

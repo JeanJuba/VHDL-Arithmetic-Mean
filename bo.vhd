@@ -30,7 +30,7 @@ use IEEE.STD_LOGIC_1164.ALL;
 --use UNISIM.VComponents.all;
 
 entity bo is
-    Port ( clk, reset, set_a, set_b, control_sul: in STD_LOGIC;
+    Port ( clk, reset, set_a, set_b, control_sum: in STD_LOGIC;
 			  option_ula_a, option_ula_b : in  STD_LOGIC_VECTOR(1 downto 0); 
 			  acum : in  STD_LOGIC_VECTOR(7 downto 0); --o valor atual
 			  valor_mem: in STD_LOGIC_VECTOR(7 downto 0);   --o valor a ser retirado de 'acum' a cada ciclo
@@ -52,19 +52,31 @@ architecture Behavioral of bo is
            valor : BUFFER  STD_LOGIC_VECTOR(7 downto 0)); --o valor armazenado
 	end component;
 	
-	component mux 
+	component alu 
     Port ( a : in  STD_LOGIC_VECTOR(7 downto 0);
            b : in  STD_LOGIC_VECTOR(7 downto 0);
-		   c : in  STD_LOGIC_VECTOR(7 downto 0);
            opt : in  STD_LOGIC_VECTOR(1 downto 0); -- 0 soma 1 subtracao 
            s : out  STD_LOGIC_VECTOR(7 downto 0));
-end component;
+	end component;
 	
 	component check_menor 
     Port ( a : in  STD_LOGIC_VECTOR(7 downto 0);
            b : in  STD_LOGIC_VECTOR(7 downto 0);
            s : out  STD_LOGIC);
-end component;
+	end component;
+
+	component mux 
+    Port ( a : in  STD_LOGIC_VECTOR(7 downto 0);
+           b : in  STD_LOGIC_VECTOR(7 downto 0);
+           opt : in  STD_LOGIC;
+           s : out  STD_LOGIC_VECTOR(7 downto 0));
+	end component;
+	
+	component comparator
+    Port ( a : in  STD_LOGIC_VECTOR(7 downto 0);
+           b : in  STD_LOGIC_VECTOR(7 downto 0);
+           s : out  STD_LOGIC);
+	end component;
 	
 	signal signal_ula_a, signal_ula_b, mux_out : STD_LOGIC_VECTOR(7 downto 0);
 

@@ -1,0 +1,12 @@
+EN bc NULL C:/Users/Usuario/Desktop/calc_media_arit/bc.vhd sub00/vhpl00 1527042548
+AR mux behavioral C:/Users/Usuario/Desktop/calc_media_arit/mux.vhd sub00/vhpl05 1527042868
+AR reg behavioral C:/Users/Usuario/Desktop/calc_media_arit/register.vhd sub00/vhpl03 1527042866
+EN bo NULL C:/Users/Usuario/Desktop/calc_media_arit/bo.vhd sub00/vhpl10 1527042873
+AR bc behavioral C:/Users/Usuario/Desktop/calc_media_arit/bc.vhd sub00/vhpl01 1527042549
+EN mux NULL C:/Users/Usuario/Desktop/calc_media_arit/mux.vhd sub00/vhpl04 1527042867
+AR alu behavioral C:/Users/Usuario/Desktop/calc_media_arit/alu.vhd sub00/vhpl07 1527042870
+AR bo behavioral C:/Users/Usuario/Desktop/calc_media_arit/bo.vhd sub00/vhpl11 1527042874
+EN comparator NULL C:/Users/Usuario/Desktop/calc_media_arit/check_menor.vhd sub00/vhpl08 1527042871
+EN reg NULL C:/Users/Usuario/Desktop/calc_media_arit/register.vhd sub00/vhpl02 1527042865
+AR comparator behavioral C:/Users/Usuario/Desktop/calc_media_arit/check_menor.vhd sub00/vhpl09 1527042872
+EN alu NULL C:/Users/Usuario/Desktop/calc_media_arit/alu.vhd sub00/vhpl06 1527042869
