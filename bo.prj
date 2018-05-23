@@ -1,0 +1,4 @@
+vhdl work "../Desktop/VHDL-Arithmetic-Mean-master/register.vhd"
+vhdl work "../Desktop/VHDL-Arithmetic-Mean-master/mux.vhd"
+vhdl work "../Desktop/VHDL-Arithmetic-Mean-master/check_menor.vhd"
+vhdl work "../Desktop/VHDL-Arithmetic-Mean-master/bo.vhd"

@@ -2,7 +2,7 @@
 -- Company: 
 -- Engineer: 
 -- 
--- Create Date:    20:39:02 05/15/2018 
+-- Create Date:    20:53:31 05/22/2018 
 -- Design Name: 
 -- Module Name:    mux - Behavioral 
 -- Project Name: 
@@ -19,7 +19,6 @@
 ----------------------------------------------------------------------------------
 library IEEE;
 use IEEE.STD_LOGIC_1164.ALL;
-use ieee.std_logic_unsigned.all;
 
 -- Uncomment the following library declaration if using
 -- arithmetic functions with Signed or Unsigned values
@@ -33,25 +32,15 @@ use ieee.std_logic_unsigned.all;
 entity mux is
     Port ( a : in  STD_LOGIC_VECTOR(7 downto 0);
            b : in  STD_LOGIC_VECTOR(7 downto 0);
-			  c : in  STD_LOGIC_VECTOR(7 downto 0);
-           opt : in  STD_LOGIC_VECTOR(1 downto 0); -- 0 soma 1 subtracao 
+           opt : in  STD_LOGIC;
            s : out  STD_LOGIC_VECTOR(7 downto 0));
 end mux;
 
 architecture Behavioral of mux is
 
 begin
-process(opt)
-begin
-	case opt is
-		when "00" =>
-			s <= a + b;
-		
-		when "01" =>
-			s <= a - c;
-		when others => s <= a;
-		
-	end case;
-end process;
+	
+	s <= a when opt = '0' else b;
+
 end Behavioral;
 

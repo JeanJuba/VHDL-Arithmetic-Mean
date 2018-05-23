@@ -1,0 +1,1 @@
+xst -intstyle ise -ifn "C:/Users/m95952/arith_mean/bo.xst" -ofn "C:/Users/m95952/arith_mean/bo.syr" 
