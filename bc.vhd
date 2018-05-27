@@ -32,11 +32,10 @@ use IEEE.STD_LOGIC_1164.ALL;
 entity bc is
     Port ( clk, reset : in STD_LOGIC; -- reset que inicia setado para colocar o estado em INICIO
 			  mem_vazia : in  STD_LOGIC; -- 0 - memória ainda contem dados 1 - memória vazia
-           menor : in  STD_LOGIC;  -- ao chegar no estado  continua no estado em 1 e vai para o FIM em 0. Sinaliza se o resto da divisao ainda eh maior que o divisor
-           opt_sum_sub : out  STD_LOGIC_VECTOR(1 downto 0);
-			  opt_counter : out  STD_LOGIC_VECTOR(1 downto 0); -- '1' para somar '0' para subtrair
-			  set_reg : out STD_LOGIC);
-			  
+			  menor : in  STD_LOGIC;     -- ao chegar no estado  continua no estado em 1 e vai para o FIM em 0. Sinaliza se o resto da divisao ainda eh maior que o divisor
+			  set_a, set_b, set_contador : out STD_LOGIC; 
+			  control_sum : out STD_LOGIC; --0 para valor memória 1 para o valor do contador
+			  option_ula_a, option_ula_b, option_contador : out STD_LOGIC_VECTOR(1 downto 0)); --00 - soma 01 - subtrai
 end bc;
 
 architecture Behavioral of bc is
@@ -71,9 +70,7 @@ architecture Behavioral of bc is
 					END IF;
 				when FIM =>
 					estado <= INICIO;
-				
 				end case;
-		
 		end if;
 	end process;
 	
@@ -82,18 +79,29 @@ architecture Behavioral of bc is
 		case estado is
 		
 			when INICIO =>
-				--reset <= '1';
-				opt_sum_sub <= "00";
-				opt_counter <= "00";
-				
+				set_a <= '0';
+				set_b <= '0';
+				set_contador <= '0';
+				control_sum <= '0';
+				option_ula_a <= "00";
+				option_ula_b <= "00";
+				option_contador <= "00";
 			when SOMA =>
-				--reset <= '0';
-				opt_sum_sub <= "01";
-				opt_counter <= "01";
+				set_a <= '1';
+				set_b <= '1';
+				set_contador <= '0';
+				control_sum <= '0'; -- 0, pois é o sinal da memória que deve ir do mux_mem_b para a ula_a
+				option_ula_a <= "00"; --00, pois a ula_a deve somar o valor atual com o valor vindo do mux_mem_b
+				option_ula_b <= "00"; --00, pois a ula_b deve somar o número de dados lidos com +1
+				option_contador <= "00"; --não está sendo usado já que o registrador de número de divisões não é usado na soma
 			when SUBTRAI =>
-				--reset <= '0';
-				opt_sum_sub <= "10";
-				opt_counter <= "11";
+				set_a <= '1';
+				set_b <= '0';
+				set_contador <= '1';
+				control_sum <= '1';
+				option_ula_a <= "00";
+				option_ula_b <= "00";
+				option_contador <= "00";
 			
 			when FIM =>
 		

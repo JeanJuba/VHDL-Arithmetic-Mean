@@ -1,4 +1,1 @@
-work	"bo.vhd"
-work	"check_menor.vhd"
-work	"mux.vhd"
-work	"register.vhd"
+work	"memoria.vhd"

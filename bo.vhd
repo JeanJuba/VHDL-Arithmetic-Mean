@@ -32,8 +32,7 @@ use IEEE.STD_LOGIC_1164.ALL;
 entity bo is
     Port ( clk, reset, set_a, set_b, set_contador, control_sum: in STD_LOGIC;
 			  option_ula_a, option_ula_b, option_contador : in  STD_LOGIC_VECTOR(1 downto 0); 
-			  --acum : in  STD_LOGIC_VECTOR(7 downto 0); --o valor atual
-			  valor_mem: in STD_LOGIC_VECTOR(7 downto 0);   --o valor a ser retirado de 'acum' a cada ciclo
+			  valor_mem: in STD_LOGIC_VECTOR(7 downto 0);   
 			  buffer_a_ula : BUFFER STD_LOGIC_VECTOR(7 downto 0);
 			  buffer_b_ula : BUFFER STD_LOGIC_VECTOR(7 downto 0);
 			  buffer_contador : BUFFER STD_LOGIC_VECTOR(7 downto 0);
