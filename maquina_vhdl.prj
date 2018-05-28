@@ -1,0 +1,8 @@
+vhdl work "C:\Users\Usuario\Desktop\calc_media_arit\register.vhd"
+vhdl work "C:\Users\Usuario\Desktop\calc_media_arit\mux.vhd"
+vhdl work "C:\Users\Usuario\Desktop\calc_media_arit\check_menor.vhd"
+vhdl work "C:\Users\Usuario\Desktop\calc_media_arit\alu.vhd"
+vhdl work "C:\Users\Usuario\Desktop\calc_media_arit\memoria.vhd"
+vhdl work "C:\Users\Usuario\Desktop\calc_media_arit\bo.vhd"
+vhdl work "C:\Users\Usuario\Desktop\calc_media_arit\bc.vhd"
+vhdl work "C:\Users\Usuario\Desktop\calc_media_arit\maquina.vhd"

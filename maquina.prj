@@ -1,0 +1,8 @@
+vhdl work "register.vhd"
+vhdl work "mux.vhd"
+vhdl work "check_menor.vhd"
+vhdl work "alu.vhd"
+vhdl work "memoria.vhd"
+vhdl work "bo.vhd"
+vhdl work "bc.vhd"
+vhdl work "maquina.vhd"

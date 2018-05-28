@@ -32,6 +32,7 @@ architecture Behavioral of memoria is
 	
 	constant mem : ROM := (b"00000000", b"00000001", b"00000010", b"00000011", b"11111111"); --"11111111" is the stop value
 	signal mem_value : STD_LOGIC_VECTOR(7 downto 0);
+	signal empty : STD_LOGIC;
 	
 begin
 	process(clock, reset)
@@ -39,26 +40,29 @@ begin
 	begin
 	
 		if reset = '1' then
-			valor <= "11111111";
-			vazia <= '1';
+			mem_value <= "11111111";
+			empty <= '1';
 			
 		elsif clock'event and clock = '1' then
 			mem_value <= mem(counter); 	--gets the current memory value
 			
 			if mem_value = "11111111" then --checks if the value read is the stop one
-				vazia <= '1';
+				empty <= '1';
 			else
-				vazia <= '0';
+				empty <= '0';
 			end if;
 			
-			valor <= mem_value; 			--sends the memory value read to the output
+			
 			if counter < 4 then
 				counter := counter + 1; --increases counter by one
 			end if;
 		else
-			valor <= "11111111";
-			vazia <= '0';
+			mem_value <= "11111111";
+			empty <= '0';
 		end if;
 	end process;
+	
+	valor <= mem_value; 			--sends the memory value read to the output
+	vazia <= empty;
 end Behavioral;
 
