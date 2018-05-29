@@ -36,7 +36,8 @@ entity bo is
 			  buffer_a_ula : BUFFER STD_LOGIC_VECTOR(7 downto 0);
 			  buffer_b_ula : BUFFER STD_LOGIC_VECTOR(7 downto 0);
 			  buffer_contador : BUFFER STD_LOGIC_VECTOR(7 downto 0);
-			  menor: out STD_LOGIC
+			  menor: out STD_LOGIC;
+			  resultado : out STD_LOGIC_VECTOR(7 downto 0)
 			  );
 end bo;
 
@@ -48,7 +49,7 @@ architecture Behavioral of bo is
     Port ( clk : in  STD_LOGIC;   --clock
            reset : in  STD_LOGIC; --reset o valor do buffer
            set : in  STD_LOGIC;   --seta o valor do buffer com o valor do mux
-		   input : in STD_LOGIC_VECTOR(7 downto 0 ); --a entrada que será somada ou subtraída ao valor
+		     input : in STD_LOGIC_VECTOR(7 downto 0 ); --a entrada que será somada ou subtraída ao valor
            valor : BUFFER  STD_LOGIC_VECTOR(7 downto 0)); --o valor armazenado
 	end component;
 	
@@ -78,8 +79,8 @@ architecture Behavioral of bo is
            s : out  STD_LOGIC);
 	end component;
 	
-	signal signal_ula_a, signal_ula_b, signal_contador, mux_out : STD_LOGIC_VECTOR(7 downto 0);
-
+	signal signal_ula_a, signal_ula_b, signal_contador, mux_out : STD_LOGIC_VECTOR(7 downto 0) :=  "00000000";
+	constant one : STD_LOGIC_VECTOR (7 downto 0) := "00000001";
 begin
 	
 	registrador_a : reg port map (clk, reset, set_a       , signal_ula_a   , buffer_a_ula);  --Registrador responsável pela soma e subtração
@@ -88,11 +89,12 @@ begin
 	
 	mux_mem_b : mux port map (valor_mem, buffer_b_ula, control_sum, mux_out);
 	
-	alu_a 		 : alu port map (buffer_a_ula   ,    mux_out, option_ula_a   , signal_ula_a); --deverá fazer acum + valor mem ou acum - counter
-	alu_b 		 : alu port map (buffer_b_ula   , "00000001", option_ula_b   , signal_ula_b); --só soma o counter signal_ula_a com +1
-	alu_contador : alu port map (buffer_contador, "00000001", option_contador, signal_contador);
+	alu_a 		 : alu port map (buffer_a_ula   , mux_out, option_ula_a   , signal_ula_a); --deverá fazer acum + valor mem ou acum - counter
+	alu_b 		 : alu port map (buffer_b_ula   , one, option_ula_b   , signal_ula_b); --só soma o counter signal_ula_a com +1
+	alu_contador : alu port map (buffer_contador, one, option_contador, signal_contador);
 	
 	compare : comparator port map (signal_ula_a, signal_ula_b, menor); --checa se valor_mem é maior que o signal_ula_a se for então menor '1'
-
+	
+	resultado <= buffer_contador;
 end Behavioral;
 

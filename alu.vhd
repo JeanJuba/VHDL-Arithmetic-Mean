@@ -38,23 +38,25 @@ entity alu is
 end alu;
 
 architecture Behavioral of alu is
-
+	signal temp : STD_LOGIC_VECTOR(7 downto 0);
 begin
-process(opt)
+process(opt, a, b)
 begin 
 	case opt is
 	
 	when "00" =>     --soma
-		s <=  a + b;
+		temp <=  a + b;
 	
 	when "01" =>     --subtrai
-		s <= a - b;
+		temp <= a - b;
 	
 	when others =>   --faz nada
-		s <= a;
+		temp <= a;
 	
 	end case;
 
 end process;
+
+s <= temp;
 end Behavioral;
 

@@ -39,17 +39,20 @@ end reg;
 
 architecture Behavioral of reg is
 	
+	signal temp : STD_LOGIC_VECTOR(7  downto 0);
+	
 begin
-process(clk, reset)
+process(clk, reset, set, input, valor)
 begin
 
-	if(reset = '1') then
-		valor <= "00000000";
+	if reset = '1' then
+		temp <= "00000000";
 		
-	elsif(clk'EVENT and clk = '1' and set = '1') then
-			valor <= input;		
+	elsif clk'EVENT and clk = '1' and set = '1' then
+			temp <= input;		
 	end if;
 end process;
+	valor <= temp;
 
 end Behavioral;
 

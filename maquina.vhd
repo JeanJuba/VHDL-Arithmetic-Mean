@@ -54,7 +54,8 @@ architecture Behavioral of maquina is
 			  buffer_a_ula : BUFFER STD_LOGIC_VECTOR(7 downto 0);
 			  buffer_b_ula : BUFFER STD_LOGIC_VECTOR(7 downto 0);
 			  buffer_contador : BUFFER STD_LOGIC_VECTOR(7 downto 0);
-			  menor: out STD_LOGIC
+			  menor: out STD_LOGIC;
+			  resultado : out STD_LOGIC_VECTOR(7 downto 0)
 			  );
 	 end component;
 	
@@ -62,21 +63,30 @@ architecture Behavioral of maquina is
     Port ( clk, reset : in STD_LOGIC; -- reset que inicia setado para colocar o estado em INICIO
 			  mem_vazia : in  STD_LOGIC; -- 0 - memória ainda contem dados 1 - memória vazia
 			  menor : in  STD_LOGIC;     -- ao chegar no estado  continua no estado em 1 e vai para o FIM em 0. Sinaliza se o resto da divisao ainda eh maior que o divisor
-			  set_a, set_b, set_contador : out STD_LOGIC; 
+			  set_a, set_b, set_contador : out STD_LOGIC;
+			  --reset_reg : out STD_LOGIC; 
 			  control_sum : out STD_LOGIC; --0 para valor memória 1 para o valor do contador
 			  option_ula_a, option_ula_b, option_contador : out STD_LOGIC_VECTOR(1 downto 0)); --00 - soma 01 - subtrai
 	end component;
 	
 	
 	signal mem_value : STD_LOGIC_VECTOR(7 downto 0); --The value read from ROM
-	signal empty, set_a, set_b, set_contador, control_sum, less_than : STD_LOGIC;
-	signal option_ula_a, option_ula_b, option_contador : STD_LOGIC_VECTOR(1 downto 0);  --Control signal for the ALU in the Operational Block 
+	signal empty, set_a, set_b, set_contador, control_sum : STD_LOGIC;
+	--signal reset_reg : STD_LOGIC;
+	signal less_than : STD_LOGIC := '0';
+	signal option_ula_a, option_ula_b, option_contador : STD_LOGIC_VECTOR(1 downto 0) := "00";  --Control signal for the ALU in the Operational Block 
 	
 begin
 
 	memory     : memoria port map (clock, reset, mem_value, empty); --ROM 
-	op_block   : bo port map (clock, reset, set_a, set_b, set_contador, control_sum, option_ula_a, option_ula_b, option_contador, mem_value, buffer_a_ula, buffer_b_ula, buffer_contador, less_than); --Operational block
 	ctrl_block : bc port map(clock, reset, empty, less_than, set_a, set_b, set_contador, control_sum, option_ula_a, option_ula_b, option_contador); --Control block
+	op_block   : bo port map (clock, reset, set_a, set_b, set_contador, control_sum, option_ula_a,
+									  option_ula_b, option_contador, mem_value, buffer_a_ula, buffer_b_ula, buffer_contador, less_than, result); --Operational block
+	
+	
+	
+	
+	
 
 end Behavioral;
 

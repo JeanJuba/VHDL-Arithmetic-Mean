@@ -30,7 +30,7 @@ architecture Behavioral of memoria is
 	
 	type ROM is array (0 to 4) of STD_LOGIC_VECTOR(7 downto 0); --Read only memory
 	
-	constant mem : ROM := (b"00000000", b"00000001", b"00000010", b"00000011", b"11111111"); --"11111111" is the stop value
+	constant mem : ROM := (b"00000010", b"00000010", b"00000010", b"00000010", b"11111111"); --"11111111" is the stop value
 	signal mem_value : STD_LOGIC_VECTOR(7 downto 0);
 	signal empty : STD_LOGIC;
 	
@@ -43,7 +43,7 @@ begin
 			mem_value <= "11111111";
 			empty <= '1';
 			
-		elsif clock'event and clock = '1' then
+		elsif clock'event  then
 			mem_value <= mem(counter); 	--gets the current memory value
 			
 			if mem_value = "11111111" then --checks if the value read is the stop one
@@ -52,13 +52,11 @@ begin
 				empty <= '0';
 			end if;
 			
-			
-			if counter < 4 then
-				counter := counter + 1; --increases counter by one
+			if clock = '1' then
+				if counter < 4 then
+					counter := counter + 1; --increases counter by one
+				end if;
 			end if;
-		else
-			mem_value <= "11111111";
-			empty <= '0';
 		end if;
 	end process;
 	

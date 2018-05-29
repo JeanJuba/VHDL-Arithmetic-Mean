@@ -1,1 +1,1 @@
--intstyle "ise" -incremental -o "C:/Users/Usuario/Desktop/calc_media_arit/memoria_tb_isim_beh.exe" -prj "C:/Users/Usuario/Desktop/calc_media_arit/memoria_tb_beh.prj" "work.memoria_tb" 
+-intstyle "ise" -incremental -o "C:/Users/Usuario/Desktop/calc_media_arit/maquina_tb_isim_beh.exe" -prj "C:/Users/Usuario/Desktop/calc_media_arit/maquina_tb_beh.prj" "work.maquina_tb" 
