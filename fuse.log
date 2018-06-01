@@ -1,35 +1,38 @@
-Running: C:\Xilinx\14.2\ISE_DS\ISE\bin\nt64\unwrapped\fuse.exe -intstyle ise -incremental -o C:/Users/Usuario/Desktop/calc_media_arit/maquina_tb_isim_beh.exe -prj C:/Users/Usuario/Desktop/calc_media_arit/maquina_tb_beh.prj work.maquina_tb 
+Running: C:\Xilinx\14.2\ISE_DS\ISE\bin\nt64\unwrapped\fuse.exe -intstyle ise -incremental -o C:/Users/Usuario/Desktop/calc_media_arit/bo_tb_isim_beh.exe -prj C:/Users/Usuario/Desktop/calc_media_arit/bo_tb_beh.prj work.bo_tb 
 ISim P.28xd (signature 0xa0883be4)
 Number of CPUs detected in this system: 4
 Turning on mult-threading, number of parallel sub-compilation jobs: 8 
 Determining compilation order of HDL files
 Parsing VHDL file "C:/Users/Usuario/Desktop/calc_media_arit/register.vhd" into library work
+Parsing VHDL file "C:/Users/Usuario/Desktop/calc_media_arit/not_logic.vhd" into library work
 Parsing VHDL file "C:/Users/Usuario/Desktop/calc_media_arit/mux.vhd" into library work
-Parsing VHDL file "C:/Users/Usuario/Desktop/calc_media_arit/check_menor.vhd" into library work
+Parsing VHDL file "C:/Users/Usuario/Desktop/calc_media_arit/comparator_zero.vhd" into library work
+Parsing VHDL file "C:/Users/Usuario/Desktop/calc_media_arit/comparator_or.vhd" into library work
+Parsing VHDL file "C:/Users/Usuario/Desktop/calc_media_arit/comparator.vhd" into library work
 Parsing VHDL file "C:/Users/Usuario/Desktop/calc_media_arit/alu.vhd" into library work
-Parsing VHDL file "C:/Users/Usuario/Desktop/calc_media_arit/memoria.vhd" into library work
+Parsing VHDL file "C:/Users/Usuario/Desktop/calc_media_arit/adder.vhd" into library work
 Parsing VHDL file "C:/Users/Usuario/Desktop/calc_media_arit/bo.vhd" into library work
-Parsing VHDL file "C:/Users/Usuario/Desktop/calc_media_arit/bc.vhd" into library work
-Parsing VHDL file "C:/Users/Usuario/Desktop/calc_media_arit/maquina.vhd" into library work
-Parsing VHDL file "C:/Users/Usuario/Desktop/calc_media_arit/maquina_tb.vhd" into library work
+Parsing VHDL file "C:/Users/Usuario/Desktop/calc_media_arit/bo_tb.vhd" into library work
 Starting static elaboration
 Completed static elaboration
 Compiling package standard
 Compiling package std_logic_1164
-Compiling architecture behavioral of entity memoria [memoria_default]
-Compiling architecture behavioral of entity bc [bc_default]
+Compiling package numeric_std
 Compiling package std_logic_arith
 Compiling package std_logic_unsigned
+Compiling architecture behavioral of entity not_logic [not_logic_default]
 Compiling architecture behavioral of entity reg [reg_default]
 Compiling architecture behavioral of entity mux [mux_default]
 Compiling architecture behavioral of entity alu [alu_default]
+Compiling architecture behavior of entity adder [adder_default]
+Compiling architecture behavioral of entity comparator_zero [comparator_zero_default]
 Compiling architecture behavioral of entity comparator [comparator_default]
+Compiling architecture behavioral of entity comparator_or [comparator_or_default]
 Compiling architecture behavioral of entity bo [bo_default]
-Compiling architecture behavioral of entity maquina [maquina_default]
-Compiling architecture behavior of entity maquina_tb
+Compiling architecture behavior of entity bo_tb
 Time Resolution for simulation is 1ps.
-Waiting for 4 sub-compilation(s) to finish...
-Compiled 21 VHDL Units
-Built simulation executable C:/Users/Usuario/Desktop/calc_media_arit/maquina_tb_isim_beh.exe
-Fuse Memory Usage: 33928 KB
-Fuse CPU Usage: 561 ms
+Waiting for 7 sub-compilation(s) to finish...
+Compiled 24 VHDL Units
+Built simulation executable C:/Users/Usuario/Desktop/calc_media_arit/bo_tb_isim_beh.exe
+Fuse Memory Usage: 36368 KB
+Fuse CPU Usage: 654 ms

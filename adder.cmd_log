@@ -1,0 +1,2 @@
+vhdtdtfi -lib work adder.vhd -prj calc_media_arit -o adder.spl -module adder -template C:/Xilinx/14.2/ISE_DS/ISE//data/splfile.tft -deleteonerror 
+spl2sym -intstyle ise -family acr2 adder.spl C:/Users/Usuario/Desktop/calc_media_arit/adder.sym 

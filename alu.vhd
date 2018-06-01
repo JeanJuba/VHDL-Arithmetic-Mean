@@ -16,16 +16,20 @@ process(opt, a, b)
 begin
 	case opt is
 	
-	when "1" =>     --sum
+	when '1' =>     --sum
 		temp <=  a + b;
 	
-	when "0" =>     --sub
+	when '0' =>     --sub
 		temp <= a - b;
+	
+	when others => 
+		temp <= a + b;
 	
 	end case;
 
 end process;
 
 s <= temp;
+
 end Behavioral;
 

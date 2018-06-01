@@ -11,5 +11,5 @@ END comparator_zero;
 
 ARCHITECTURE Behavioral OF comparator_zero IS
 BEGIN
-	zero <= '1' WHEN input = '0' ELSE '0';--True if the input is zero
+	zero <= '1' WHEN input = "00000000" ELSE '0';--True if the input is zero
 END Behavioral;

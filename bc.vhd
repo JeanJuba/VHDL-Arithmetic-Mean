@@ -31,22 +31,21 @@ use IEEE.STD_LOGIC_1164.ALL;
 
 entity bc is
     Port ( clk, reset : in STD_LOGIC; -- reset que inicia setado para colocar o estado em INICIO
-			  mem_vazia : in  STD_LOGIC; -- 0 - memória ainda contem dados 1 - memória vazia
-			  menor : in  STD_LOGIC;     -- ao chegar no estado  continua no estado em 1 e vai para o FIM em 0. Sinaliza se o resto da divisao ainda eh maior que o divisor
-			  set_a, set_b, set_contador : out STD_LOGIC;
-			  --reset_reg : out STD_LOGIC; 
-			  control_sum : out STD_LOGIC; --0 para valor memória 1 para o valor do contador
-			  option_ula_a, option_ula_b, option_contador : out STD_LOGIC_VECTOR(1 downto 0)); --00 - soma 01 - subtrai
+			  mem_vazia : in STD_LOGIC;
+			  result_ready : in  STD_LOGIC; 
+			  set_acumulador : out STD_LOGIC;
+			  mem_read : out  STD_LOGIC -- 0 - faz nada 1 - memória lida
+			  ); 
 end bc;
 
 architecture Behavioral of bc is
-	type state is (INICIO, SOMA, TRANSICAO, SUBTRAI, FIM);
+	type state is (INICIO, SOMA, SUBTRAI);
 	
 	signal estado : state;
 	
 	begin
 
-	process(clk, reset, mem_vazia, menor) 
+	process(clk, reset, mem_vazia) 
 	begin
 		if(reset = '1') then
 			estado <= INICIO;
@@ -60,20 +59,15 @@ architecture Behavioral of bc is
 					if(mem_vazia = '0') then
 						estado <= SOMA;
 					else 
-						estado <= TRANSICAO;
+						estado <= SUBTRAI;
 					end if;
 	
-				when TRANSICAO =>
-					estado <= SUBTRAI;
-	
 				when SUBTRAI =>
-					if(menor = '0') then
+					if(result_ready = '0') then
 						estado <= SUBTRAI;
 					else
-						estado <= FIM;
+						estado <= INICIO;
 					END IF;
-				when FIM =>
-					estado <= INICIO;
 				end case;
 		end if;
 	end process;
@@ -83,53 +77,14 @@ architecture Behavioral of bc is
 		case estado is
 		
 			when INICIO =>
-				--reset_reg <= '1';
-				set_a <= '0';
-				set_b <= '0';
-				set_contador <= '0';
-				control_sum <= '0';
-				option_ula_a <= "00";
-				option_ula_b <= "00";
-				option_contador <= "00";
+				set_acumulador <= '0';
 				
 			when SOMA =>
-				--reset_reg <= '0';
-				set_a <= '1';
-				set_b <= '1';
-				set_contador <= '0';
-				control_sum <= '0'; -- 0, pois é o sinal da memória que deve ir do mux_mem_b para a ula_a
-				option_ula_a <= "00"; --00, pois a ula_a deve somar o valor atual com o valor vindo do mux_mem_b
-				option_ula_b <= "00"; --00, pois a ula_b deve somar o número de dados lidos com +1
-				option_contador <= "00"; --não está sendo usado já que o registrador de número de divisões não é usado na soma
+				set_acumulador <= '1';
+				mem_read <= '1';
 				
-			when TRANSICAO =>
-				set_a <= '0';
-				set_b <= '0';
-				set_contador <= '0';
-				control_sum <= '1';
-				option_ula_a <= "01";
-				option_ula_b <= "00";
-				option_contador <= "00";
-			
 			when SUBTRAI =>
-				--reset_reg <= '0';
-				set_a <= '1'; --O valor acumulad continuará a ser modificado
-				set_b <= '0'; --O contador de valores de memória ficará parado
-				set_contador <= '1'; --O contador de divisões começará a subir
-				control_sum <= '1';  --O mux usará o número de valores de memoria lidos para subtrair do acumulado
-				option_ula_a <= "01"; --a ula_a subtrairá o acumulado pelo número de valores lidos da memória
-				option_ula_b <= "00";
-				option_contador <= "00";
-			
-			when FIM =>
-				--reset_reg <= '1';
-				set_a <= '0';
-				set_b <= '0';
-				set_contador <= '0';
-				control_sum <= '0';
-				option_ula_a <= "00";
-				option_ula_b <= "00";
-				option_contador <= "00";
+				mem_read <= '0';				
 				
 		end case;
 		

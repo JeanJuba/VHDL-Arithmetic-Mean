@@ -9,13 +9,14 @@
 
   ARCHITECTURE behavior OF bo_tb IS 
 
-		signal clk, reset, set_a, set_b, set_contador, control_sum: STD_LOGIC := '0';
-		signal option_ula_a, option_ula_b, option_contador :   STD_LOGIC_VECTOR(1 downto 0); 
+		signal clk : STD_LOGIC := '0';
+		signal reset, set_acumulador, mem_read: STD_LOGIC; 
 		signal valor_mem:  STD_LOGIC_VECTOR(7 downto 0);   
-		signal buffer_a_ula : STD_LOGIC_VECTOR(7 downto 0);
-		signal buffer_b_ula :  STD_LOGIC_VECTOR(7 downto 0);
-		signal buffer_contador :  STD_LOGIC_VECTOR(7 downto 0);
-		signal menor:  STD_LOGIC;
+		signal buffer_acumulador : STD_LOGIC_VECTOR(7 downto 0);
+		signal buffer_counter :  STD_LOGIC_VECTOR(7 downto 0);
+		signal buffer_result :  STD_LOGIC_VECTOR(7 downto 0); 
+		signal result_ready:  STD_LOGIC;
+		signal resultado:  STD_LOGIC_VECTOR(7 downto 0);
 		
 		constant clk_period : time := 10 ns;
 
@@ -23,20 +24,16 @@
 
   -- Component Instantiation
           uut: entity work.bo PORT MAP(
-                  clk => clk,
-						reset => reset,
-						set_a => set_a, 
-						set_b => set_b,
-						set_contador => set_contador,
-						valor_mem => valor_mem,
-						control_sum => control_sum,
-						option_ula_a => option_ula_a,
-						option_ula_b => option_ula_b,
-						option_contador => option_contador,
-						buffer_a_ula => buffer_a_ula,
-						buffer_b_ula => buffer_b_ula,
-						buffer_contador => buffer_contador,
-						menor => menor
+			clk => clk,
+			reset => reset,
+ 			set_acumulador => set_acumulador,
+			mem_read => mem_read,
+		   valor_mem => valor_mem,
+		   buffer_acumulador => buffer_acumulador,
+		   buffer_counter => buffer_counter,
+		   buffer_result => buffer_result,
+	      result_ready => result_ready,
+	   	resultado => resultado
           );
 
 	clk_process :process
@@ -45,14 +42,9 @@
 		wait for clk_period/2;
    end process;
 	
-	valor_mem <= "00000000", "00000001" after 10ns, "00000001" after 20ns, "00000010" after 40ns;
-	reset <= '1', '0' after 10 ns;
-	set_a <= '0', '1' after 10 ns;
-	set_b <= '0', '1' after 10 ns;
-	set_contador <= '0';
-	control_sum  <= '0';
-	option_ula_a <= "00";
-	option_ula_b <= "00";
-	option_contador <= "00";
+	reset <= '1', '0' after 5 ns;
+	set_acumulador <= '1';
+	mem_read <= '1', '0' after 70 ns;
+	valor_mem <= "00000001", "00000010" after 10 ns ;-- after 10 ns "00000001";
 
   END;

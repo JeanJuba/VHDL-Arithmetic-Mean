@@ -60,16 +60,11 @@ ARCHITECTURE behavior OF bc_tb IS
    signal clk : std_logic := '0';
    signal reset : std_logic := '0';
    signal mem_vazia : std_logic := '0';
-   signal menor : std_logic := '0';
+   signal result_ready : std_logic := '0';
+	signal set_acumulador : std_logic := '0';
 
  	--Outputs
-   signal set_a : std_logic;
-   signal set_b : std_logic;
-   signal set_contador : std_logic;
-   signal control_sum : std_logic;
-   signal option_ula_a : std_logic_vector(1 downto 0);
-   signal option_ula_b : std_logic_vector(1 downto 0);
-   signal option_contador : std_logic_vector(1 downto 0);
+   signal mem_read : std_logic := '0';
 
    -- Clock period definitions
    constant clk_period : time := 10 ns;
@@ -79,16 +74,11 @@ BEGIN
 	-- Instantiate the Unit Under Test (UUT)
    uut: entity work.bc PORT MAP (
           clk => clk,
-          reset => reset,
-          mem_vazia => mem_vazia,
-          menor => menor,
-          set_a => set_a,
-          set_b => set_b,
-          set_contador => set_contador,
-          control_sum => control_sum,
-          option_ula_a => option_ula_a,
-          option_ula_b => option_ula_b,
-          option_contador => option_contador
+			 reset => reset, -- reset que inicia setado para colocar o estado em INICIO
+			  mem_vazia => mem_vazia,
+			  result_ready => result_ready,
+			  set_acumulador => set_acumulador,
+			  mem_read => mem_read
         );
 
    -- Clock process definitions
@@ -101,7 +91,6 @@ BEGIN
    end process;
  
 
-   mem_vazia <= '1' after 60 ns;
-	menor <= '1' after 120 ns;
+  
 
 END;

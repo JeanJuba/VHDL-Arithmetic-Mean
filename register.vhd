@@ -2,11 +2,11 @@ library IEEE;
 use IEEE.STD_LOGIC_1164.ALL;
 
 entity reg is
-    Port ( 	clock 	: in  STD_LOGIC;
-			reset 	: in  STD_LOGIC;
-			set 	: in  STD_LOGIC;   --allow the register value to change
-			input 	: in STD_LOGIC_VECTOR(7 downto 0 ); --the new value to be stored
-			stored 	: BUFFER  STD_LOGIC_VECTOR(7 downto 0)); --the stored value
+    Port (clk 	: in  STD_LOGIC;
+			 reset 	: in  STD_LOGIC;
+			 set 	: in  STD_LOGIC;   --allow the register value to change
+			 input 	: in STD_LOGIC_VECTOR(7 downto 0 ); --the new value to be stored
+			 stored 	: BUFFER  STD_LOGIC_VECTOR(7 downto 0)); --the stored value
 end reg;
 
 architecture Behavioral of reg is
@@ -14,13 +14,13 @@ architecture Behavioral of reg is
 	signal temp : STD_LOGIC_VECTOR(7  downto 0);
 	
 begin
-process(clock, reset, set, input, stored)
+process(clk, reset, set, input, stored)
 begin
 
 	if reset = '1' then
 		temp <= "00000000";
 		
-	elsif clock'EVENT and clock = '1' and set = '1' then
+	elsif clk'EVENT and clk = '1' and set = '1' then
 			temp <= input;		
 	end if;
 end process;

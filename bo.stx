@@ -3,41 +3,59 @@ Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved.
 --> Parameter TMPDIR set to C:/Users/Usuario/Desktop/calc_media_arit/xst/projnav.tmp
 
 
-Total REAL time to Xst completion: 0.00 secs
-Total CPU time to Xst completion: 0.14 secs
+Total REAL time to Xst completion: 1.00 secs
+Total CPU time to Xst completion: 0.11 secs
  
 --> Parameter xsthdpdir set to C:/Users/Usuario/Desktop/calc_media_arit/xst
 
 
-Total REAL time to Xst completion: 0.00 secs
-Total CPU time to Xst completion: 0.14 secs
+Total REAL time to Xst completion: 1.00 secs
+Total CPU time to Xst completion: 0.11 secs
  
 --> WARNING:Xst:3164 - Option "-debug" found multiple times in the command line. Only the first occurence is considered.
 
 =========================================================================
 *                          HDL Compilation                              *
 =========================================================================
+WARNING:HDLParsers:3607 - Unit work/comparator is now defined in a different file.  It was defined in "C:/Users/Usuario/Desktop/calc_media_arit/check_menor.vhd", and is now defined in "C:/Users/Usuario/Desktop/calc_media_arit/comparator.vhd".
+WARNING:HDLParsers:3607 - Unit work/comparator/Behavioral is now defined in a different file.  It was defined in "C:/Users/Usuario/Desktop/calc_media_arit/check_menor.vhd", and is now defined in "C:/Users/Usuario/Desktop/calc_media_arit/comparator.vhd".
+Compiling vhdl file "C:/Users/Usuario/Desktop/calc_media_arit/not_logic.vhd" in Library work.
+Entity <not_logic> compiled.
+Entity <not_logic> (Architecture <Behavioral>) compiled.
 Compiling vhdl file "C:/Users/Usuario/Desktop/calc_media_arit/register.vhd" in Library work.
-Architecture behavioral of Entity reg is up to date.
+Entity <reg> compiled.
+Entity <reg> (Architecture <behavioral>) compiled.
 Compiling vhdl file "C:/Users/Usuario/Desktop/calc_media_arit/mux.vhd" in Library work.
-Architecture behavioral of Entity mux is up to date.
+Entity <mux> compiled.
+Entity <mux> (Architecture <behavioral>) compiled.
 Compiling vhdl file "C:/Users/Usuario/Desktop/calc_media_arit/alu.vhd" in Library work.
-Architecture behavioral of Entity alu is up to date.
-Compiling vhdl file "C:/Users/Usuario/Desktop/calc_media_arit/check_menor.vhd" in Library work.
-Architecture behavioral of Entity comparator is up to date.
+Entity <alu> compiled.
+Entity <alu> (Architecture <behavioral>) compiled.
+Compiling vhdl file "C:/Users/Usuario/Desktop/calc_media_arit/adder.vhd" in Library work.
+Entity <adder> compiled.
+Entity <adder> (Architecture <behavior>) compiled.
+Compiling vhdl file "C:/Users/Usuario/Desktop/calc_media_arit/comparator_zero.vhd" in Library work.
+Entity <comparator_zero> compiled.
+Entity <comparator_zero> (Architecture <Behavioral>) compiled.
+Compiling vhdl file "C:/Users/Usuario/Desktop/calc_media_arit/comparator.vhd" in Library work.
+Entity <comparator> compiled.
+Entity <comparator> (Architecture <behavioral>) compiled.
+Compiling vhdl file "C:/Users/Usuario/Desktop/calc_media_arit/comparator_or.vhd" in Library work.
+Entity <comparator_or> compiled.
+Entity <comparator_or> (Architecture <Behavioral>) compiled.
 Compiling vhdl file "C:/Users/Usuario/Desktop/calc_media_arit/bo.vhd" in Library work.
 Entity <bo> compiled.
 Entity <bo> (Architecture <behavioral>) compiled.
 
 
-Total REAL time to Xst completion: 0.00 secs
-Total CPU time to Xst completion: 0.20 secs
+Total REAL time to Xst completion: 1.00 secs
+Total CPU time to Xst completion: 0.24 secs
  
 --> 
 
-Total memory usage is 210480 kilobytes
+Total memory usage is 210800 kilobytes
 
 Number of errors   :    0 (   0 filtered)
-Number of warnings :    1 (   0 filtered)
+Number of warnings :    3 (   0 filtered)
 Number of infos    :    0 (   0 filtered)
 
