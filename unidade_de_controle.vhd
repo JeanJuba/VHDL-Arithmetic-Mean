@@ -1,49 +1,47 @@
 LIBRARY ieee;
 USE ieee.std_logic_1164.all;
 
-ENTITY unidade_de_controle IS
-PORT (Reset, clock, divisao_possivel : IN STD_LOGIC;
-instrucao : IN STD_LOGIC(7 DOWNTO 0);
-load_a, load_b, resultado_pronto : OUT STD_LOGIC);
-END unidade_de_controle;
+ENTITY control_unit IS
+PORT (	Reset, clock, result_ready, operation_end : IN STD_LOGIC;
+		instruction_in : IN STD_LOGIC(7 DOWNTO 0);
+		instruction_out : OUT STD_LOGIC(7 DOWNTO 0);
+		mem_read : OUT STD_LOGIC);
+END control_unit;
 
-ARCHITECTURE estrutura OF unidade_de_controle IS
-	TYPE state_type IS (LEITURA, SOMANDO, DIVIDINDO, RESULTADO);
+ARCHITECTURE estrutura OF control_unit IS
+	TYPE state_type IS (READING, ADDING, DIVIDING, RESULT);
 	SIGNAL state: state_type;
 BEGIN
 	-- Logica de proximo estado (e registrador de estado)
-	PROCESS (clock, Reset)
+	PROCESS (clock, Reset, instruction, result_ready)
 	BEGIN
 		if(Reset = '1') THEN
-			state <= LEITURA;
+			state <= READING;
 		ELSIF (clock'EVENT AND clock = '1') THEN
 			CASE state IS
-				WHEN LEITURA =>
-				load_a <= '1';
-					load_b <= '1';
-					resultado_pronto <= '0';
-					divisao_possivel <= '0';				-- é necessário informar todos os sinais a cada estado?
-					IF (instrucao = '11111111') THEN
-						state <= DIVIDINDO;
+				WHEN READING =>
+					mem_read <= '1';
+					instruction_out <= instruction_in
+					IF (instruction = "11111111") THEN
+						state <= DIVIDING;
 					ELSE
-						state <= SOMANDO;
+						state <= ADDING;
 					END IF;
-				WHEN SOMANDO =>
-					state <= LEITURA;
-				WHEN DIVIDINDO =>
-					load_a <= '0';
-					load_b <= '0';
-					resultado_pronto <= '0';
-					IF (divisao_possivel = '1') THEN
-						state <= DIVIDINDO;
+				WHEN ADDING =>
+					IF (result_ready = '1') THEN
+						state <= RESULT;
 					ELSE
-						resultado_pronto <= '1';
-						state <= RESULTADO;
-				WHEN RESULTADO =>
-					state <= LEITURA;
-					load_a <= '0';
-					load_b <= '0';
-					resultado_pronto <= '1';
+						state <= READING;
+				WHEN DIVIDING =>
+					mem_read <= '0';
+					IF (result_ready = '1') THEN
+						state <= RESULT;
+					ELSE
+						state <= DIVIDING;
+					END IF;
+				WHEN RESULT =>
+					state <= READING;
+					result_ready <= '0';
 					reset <= '1';
 			END CASE;
 		END IF;
