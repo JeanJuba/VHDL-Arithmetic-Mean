@@ -1,0 +1,10 @@
+[Inputs]
+clock
+reset
+[Outputs]
+resultado_pronto
+=buffer_acumulador[7:0]=
+=buffer_counter[7:0]=
+=buffer_resultado[7:0]=
+=resultado[7:0]=
+[BiDir]

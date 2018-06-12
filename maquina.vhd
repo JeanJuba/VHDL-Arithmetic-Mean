@@ -1,92 +1,81 @@
-----------------------------------------------------------------------------------
--- Company: 
--- Engineer: 
--- 
--- Create Date:    16:00:45 05/21/2018 
--- Design Name: 
--- Module Name:    maquina - Behavioral 
--- Project Name: 
--- Target Devices: 
--- Tool versions: 
--- Description: 
---
--- Dependencies: 
---
--- Revision: 
--- Revision 0.01 - File Created
--- Additional Comments: 
---
-----------------------------------------------------------------------------------
 library IEEE;
 use IEEE.STD_LOGIC_1164.ALL;
 
--- Uncomment the following library declaration if using
--- arithmetic functions with Signed or Unsigned values
---use IEEE.NUMERIC_STD.ALL;
-
--- Uncomment the following library declaration if instantiating
--- any Xilinx primitives in this code.
---library UNISIM;
---use UNISIM.VComponents.all;
-
 entity maquina is
     Port ( clock, reset : in  STD_LOGIC;
-			  buffer_a_ula : BUFFER STD_LOGIC_VECTOR(7 downto 0);
-			  buffer_b_ula : BUFFER STD_LOGIC_VECTOR(7 downto 0);
-			  buffer_contador : BUFFER STD_LOGIC_VECTOR(7 downto 0);
-           result : out  STD_LOGIC_VECTOR(7 downto 0) --the value of the division
-			  );
+			valor_memoria : out std_logic_vector (7 downto 0);
+			memoria_vazia : out std_logic;
+		   buffer_acumulador : BUFFER STD_LOGIC_VECTOR(7 downto 0);
+		   buffer_counter : BUFFER STD_LOGIC_VECTOR(7 downto 0);
+		   buffer_resultado : BUFFER STD_LOGIC_VECTOR(7 downto 0);
+			resultado_pronto : out std_logic;
+			set_acumulador : out STD_LOGIC;
+			reset_acumulador : out STD_LOGIC;
+			set_counter : out STD_LOGIC;
+			reset_counter : out STD_LOGIC;
+			set_resultado : out STD_LOGIC;
+			reset_resultado : out STD_LOGIC;
+			enviar : out STD_LOGIC;
+         resultado : out  STD_LOGIC_VECTOR(7 downto 0));--the value of the division
 end maquina;
 
 architecture Behavioral of maquina is
 
 	component memoria
-    Port ( clock, reset :in STD_LOGIC;
-			  valor : out  STD_LOGIC_VECTOR(7 downto 0);
-           vazia : out  STD_LOGIC);
+    Port ( clock, reset, enviar :in STD_LOGIC;
+		     valor : out  STD_LOGIC_VECTOR(7 downto 0);
+           memoria_vazia : out  STD_LOGIC);
 	end component;
 	
-	
 	component bo
-    Port ( clk, reset, set_a, set_b, set_contador, control_sum: in STD_LOGIC;
-			  option_ula_a, option_ula_b, option_contador : in  STD_LOGIC_VECTOR(1 downto 0); 
-			  valor_mem: in STD_LOGIC_VECTOR(7 downto 0);   
-			  buffer_a_ula : BUFFER STD_LOGIC_VECTOR(7 downto 0);
-			  buffer_b_ula : BUFFER STD_LOGIC_VECTOR(7 downto 0);
-			  buffer_contador : BUFFER STD_LOGIC_VECTOR(7 downto 0);
-			  menor: out STD_LOGIC;
-			  resultado : out STD_LOGIC_VECTOR(7 downto 0)
-			  );
+    Port (clk, reset, set_acumulador, reset_acumulador, set_counter, reset_counter, set_resultado, reset_resultado, memoria_lida: in STD_LOGIC;
+		    valor_memoria: in STD_LOGIC_VECTOR(7 downto 0);   
+		    buffer_acumulador : BUFFER STD_LOGIC_VECTOR(7 downto 0);
+		    buffer_counter : BUFFER STD_LOGIC_VECTOR(7 downto 0);
+		    buffer_result : BUFFER STD_LOGIC_VECTOR(7 downto 0);
+	       result_ready : out STD_LOGIC;
+	   	 resultado : out STD_LOGIC_VECTOR(7 downto 0));
 	 end component;
 	
 	 component bc
-    Port ( clk, reset : in STD_LOGIC; -- reset que inicia setado para colocar o estado em INICIO
-			  mem_vazia : in  STD_LOGIC; -- 0 - memória ainda contem dados 1 - memória vazia
-			  menor : in  STD_LOGIC;     -- ao chegar no estado  continua no estado em 1 e vai para o FIM em 0. Sinaliza se o resto da divisao ainda eh maior que o divisor
-			  set_a, set_b, set_contador : out STD_LOGIC;
-			  --reset_reg : out STD_LOGIC; 
-			  control_sum : out STD_LOGIC; --0 para valor memória 1 para o valor do contador
-			  option_ula_a, option_ula_b, option_contador : out STD_LOGIC_VECTOR(1 downto 0)); --00 - soma 01 - subtrai
+    Port ( clock, reset : in STD_LOGIC; -- reset que inicia setado para colocar o estado em INICIO
+			  memoria_vazia : in STD_LOGIC;
+			  resultado_pronto : in  STD_LOGIC; 
+			  set_acumulador : out STD_LOGIC;
+			  reset_acumulador : out STD_LOGIC;
+			  set_counter : out STD_LOGIC;
+			  reset_counter : out STD_LOGIC;
+			  set_resultado : out STD_LOGIC;
+			  reset_resultado : out STD_LOGIC;
+			  enviar : out STD_LOGIC;
+			  memoria_lida : out  STD_LOGIC ); -- 0 - faz nada 1 - memória lida); --00 - soma 01 - subtrai
 	end component;
 	
-	
 	signal mem_value : STD_LOGIC_VECTOR(7 downto 0); --The value read from ROM
-	signal empty, set_a, set_b, set_contador, control_sum : STD_LOGIC;
-	--signal reset_reg : STD_LOGIC;
+	signal enviar_valor, empty, memoria_lida : STD_LOGIC := '0'; 
+	signal set_acumulador_s,   set_counter_s,   set_resultado_s : std_logic := '0';
+	signal reset_acumulador_s, reset_counter_s, reset_resultado_s : std_logic := '1';
 	signal less_than : STD_LOGIC := '0';
-	signal option_ula_a, option_ula_b, option_contador : STD_LOGIC_VECTOR(1 downto 0) := "00";  --Control signal for the ALU in the Operational Block 
 	
 begin
 
-	memory     : memoria port map (clock, reset, mem_value, empty); --ROM 
-	ctrl_block : bc port map(clock, reset, empty, less_than, set_a, set_b, set_contador, control_sum, option_ula_a, option_ula_b, option_contador); --Control block
-	op_block   : bo port map (clock, reset, set_a, set_b, set_contador, control_sum, option_ula_a,
-									  option_ula_b, option_contador, mem_value, buffer_a_ula, buffer_b_ula, buffer_contador, less_than, result); --Operational block
+	memory     : memoria port map (clock, reset, enviar_valor, mem_value, empty); --ROM 
 	
+	ctrl_block : bc port map(clock, reset, empty, less_than, set_acumulador_s, reset_acumulador_s, set_counter_s, reset_counter_s, set_resultado_s, reset_resultado_s, enviar_valor, memoria_lida); --Control block
 	
+	op_block   : bo port map (clock, reset, set_acumulador_s, reset_acumulador_s, set_counter_s, reset_counter_s, set_resultado_s, reset_resultado_s,
+					 memoria_lida, mem_value, buffer_acumulador, buffer_counter, buffer_resultado, less_than, resultado); --Operational block
+	 
 	
-	
-	
-
+	valor_memoria <= mem_value;
+	memoria_vazia <= empty;
+	set_acumulador <= set_acumulador_s;
+	reset_acumulador <= reset_acumulador_s;
+	set_counter <= set_counter_s;
+	reset_counter <= reset_counter_s;
+	set_resultado <= set_resultado_s;
+	reset_resultado <= set_resultado_s;
+	enviar <= enviar_valor;
+	resultado_pronto <= less_than;
 end Behavioral;
 

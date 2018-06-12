@@ -1,0 +1,455 @@
+Release 14.2 - xst P.28xd (nt64)
+Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved.
+--> Parameter TMPDIR set to xst/projnav.tmp
+
+
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.12 secs
+ 
+--> Parameter xsthdpdir set to xst
+
+
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.12 secs
+ 
+--> Reading design: maquina.prj
+
+TABLE OF CONTENTS
+  1) Synthesis Options Summary
+  2) HDL Compilation
+  3) Design Hierarchy Analysis
+  4) HDL Analysis
+  5) HDL Synthesis
+     5.1) HDL Synthesis Report
+  6) Advanced HDL Synthesis
+     6.1) Advanced HDL Synthesis Report
+  7) Low Level Synthesis
+  8) Partition Report
+  9) Final Report
+
+=========================================================================
+*                      Synthesis Options Summary                        *
+=========================================================================
+---- Source Parameters
+Input File Name                    : "maquina.prj"
+Input Format                       : mixed
+Ignore Synthesis Constraint File   : NO
+
+---- Target Parameters
+Output File Name                   : "maquina"
+Output Format                      : NGC
+Target Device                      : Automotive CoolRunner2
+
+---- Source Options
+Top Module Name                    : maquina
+Automatic FSM Extraction           : YES
+FSM Encoding Algorithm             : Auto
+Safe Implementation                : No
+Mux Extraction                     : Yes
+Resource Sharing                   : YES
+
+---- Target Options
+Add IO Buffers                     : YES
+MACRO Preserve                     : YES
+XOR Preserve                       : YES
+Equivalent register Removal        : YES
+
+---- General Options
+Optimization Goal                  : Speed
+Optimization Effort                : 1
+Keep Hierarchy                     : Yes
+Netlist Hierarchy                  : As_Optimized
+RTL Output                         : Yes
+Hierarchy Separator                : /
+Bus Delimiter                      : <>
+Case Specifier                     : Maintain
+Verilog 2001                       : YES
+
+---- Other Options
+Clock Enable                       : YES
+wysiwyg                            : NO
+
+=========================================================================
+
+
+=========================================================================
+*                          HDL Compilation                              *
+=========================================================================
+Compiling vhdl file "C:/Users/Usuario/Desktop/calc_media_arit updated/register.vhd" in Library work.
+Architecture behavioral of Entity reg is up to date.
+Compiling vhdl file "C:/Users/Usuario/Desktop/calc_media_arit updated/mux.vhd" in Library work.
+Architecture behavioral of Entity mux is up to date.
+Compiling vhdl file "C:/Users/Usuario/Desktop/calc_media_arit updated/alu.vhd" in Library work.
+Architecture behavioral of Entity alu is up to date.
+Compiling vhdl file "C:/Users/Usuario/Desktop/calc_media_arit updated/adder.vhd" in Library work.
+Architecture behavior of Entity adder is up to date.
+Compiling vhdl file "C:/Users/Usuario/Desktop/calc_media_arit updated/comparator_zero.vhd" in Library work.
+Architecture behavioral of Entity comparator_zero is up to date.
+Compiling vhdl file "C:/Users/Usuario/Desktop/calc_media_arit updated/comparator.vhd" in Library work.
+Architecture behavioral of Entity comparator is up to date.
+Compiling vhdl file "C:/Users/Usuario/Desktop/calc_media_arit updated/comparator_or.vhd" in Library work.
+Architecture behavioral of Entity comparator_or is up to date.
+Compiling vhdl file "C:/Users/Usuario/Desktop/calc_media_arit updated/memoria.vhd" in Library work.
+Architecture behavioral of Entity memoria is up to date.
+Compiling vhdl file "C:/Users/Usuario/Desktop/calc_media_arit updated/bc.vhd" in Library work.
+Architecture behavioral of Entity bc is up to date.
+Compiling vhdl file "C:/Users/Usuario/Desktop/calc_media_arit updated/bo.vhd" in Library work.
+Architecture behavioral of Entity bo is up to date.
+Compiling vhdl file "C:/Users/Usuario/Desktop/calc_media_arit updated/maquina.vhd" in Library work.
+Entity <maquina> compiled.
+Entity <maquina> (Architecture <behavioral>) compiled.
+
+=========================================================================
+*                     Design Hierarchy Analysis                         *
+=========================================================================
+Analyzing hierarchy for entity <maquina> in library <work> (architecture <behavioral>).
+
+Analyzing hierarchy for entity <memoria> in library <work> (architecture <behavioral>).
+
+Analyzing hierarchy for entity <bc> in library <work> (architecture <behavioral>).
+
+Analyzing hierarchy for entity <bo> in library <work> (architecture <behavioral>).
+
+Analyzing hierarchy for entity <reg> in library <work> (architecture <behavioral>).
+
+Analyzing hierarchy for entity <mux> in library <work> (architecture <behavioral>).
+
+Analyzing hierarchy for entity <alu> in library <work> (architecture <behavioral>).
+
+Analyzing hierarchy for entity <adder> in library <work> (architecture <behavior>).
+
+Analyzing hierarchy for entity <comparator_zero> in library <work> (architecture <behavioral>).
+
+Analyzing hierarchy for entity <comparator> in library <work> (architecture <behavioral>).
+
+Analyzing hierarchy for entity <comparator_or> in library <work> (architecture <behavioral>).
+
+
+=========================================================================
+*                            HDL Analysis                               *
+=========================================================================
+Analyzing Entity <maquina> in library <work> (Architecture <behavioral>).
+INFO:Xst:1739 - HDL ADVISOR - "C:/Users/Usuario/Desktop/calc_media_arit updated/maquina.vhd" line 8: declaration of a buffer port will make it difficult for you to validate this design by simulation. It is preferable to declare it as output.
+INFO:Xst:1739 - HDL ADVISOR - "C:/Users/Usuario/Desktop/calc_media_arit updated/maquina.vhd" line 9: declaration of a buffer port will make it difficult for you to validate this design by simulation. It is preferable to declare it as output.
+INFO:Xst:1739 - HDL ADVISOR - "C:/Users/Usuario/Desktop/calc_media_arit updated/maquina.vhd" line 10: declaration of a buffer port will make it difficult for you to validate this design by simulation. It is preferable to declare it as output.
+INFO:Xst:1739 - HDL ADVISOR - "C:/Users/Usuario/Desktop/calc_media_arit updated/maquina.vhd" line 7: declaration of a buffer port will make it difficult for you to validate this design by simulation. It is preferable to declare it as output.
+INFO:Xst:1739 - HDL ADVISOR - "C:/Users/Usuario/Desktop/calc_media_arit updated/maquina.vhd" line 8: declaration of a buffer port will make it difficult for you to validate this design by simulation. It is preferable to declare it as output.
+INFO:Xst:1739 - HDL ADVISOR - "C:/Users/Usuario/Desktop/calc_media_arit updated/maquina.vhd" line 9: declaration of a buffer port will make it difficult for you to validate this design by simulation. It is preferable to declare it as output.
+Entity <maquina> analyzed. Unit <maquina> generated.
+
+Analyzing Entity <memoria> in library <work> (Architecture <behavioral>).
+WARNING:Xst:819 - "C:/Users/Usuario/Desktop/calc_media_arit updated/memoria.vhd" line 19: One or more signals are missing in the process sensitivity list. To enable synthesis of FPGA/CPLD hardware, XST will assume that all necessary signals are present in the sensitivity list. Please note that the result of the synthesis may differ from the initial design specification. The missing signals are:
+   <mem_value>
+Entity <memoria> analyzed. Unit <memoria> generated.
+
+Analyzing Entity <bc> in library <work> (Architecture <behavioral>).
+Entity <bc> analyzed. Unit <bc> generated.
+
+Analyzing Entity <bo> in library <work> (Architecture <behavioral>).
+INFO:Xst:1739 - HDL ADVISOR - "C:/Users/Usuario/Desktop/calc_media_arit updated/bo.vhd" line 9: declaration of a buffer port will make it difficult for you to validate this design by simulation. It is preferable to declare it as output.
+INFO:Xst:1739 - HDL ADVISOR - "C:/Users/Usuario/Desktop/calc_media_arit updated/bo.vhd" line 9: declaration of a buffer port will make it difficult for you to validate this design by simulation. It is preferable to declare it as output.
+INFO:Xst:1739 - HDL ADVISOR - "C:/Users/Usuario/Desktop/calc_media_arit updated/bo.vhd" line 9: declaration of a buffer port will make it difficult for you to validate this design by simulation. It is preferable to declare it as output.
+Entity <bo> analyzed. Unit <bo> generated.
+
+Analyzing Entity <reg> in library <work> (Architecture <behavioral>).
+Entity <reg> analyzed. Unit <reg> generated.
+
+Analyzing Entity <mux> in library <work> (Architecture <behavioral>).
+Entity <mux> analyzed. Unit <mux> generated.
+
+Analyzing Entity <alu> in library <work> (Architecture <behavioral>).
+Entity <alu> analyzed. Unit <alu> generated.
+
+Analyzing Entity <adder> in library <work> (Architecture <behavior>).
+Entity <adder> analyzed. Unit <adder> generated.
+
+Analyzing Entity <comparator_zero> in library <work> (Architecture <behavioral>).
+Entity <comparator_zero> analyzed. Unit <comparator_zero> generated.
+
+Analyzing Entity <comparator> in library <work> (Architecture <behavioral>).
+Entity <comparator> analyzed. Unit <comparator> generated.
+
+Analyzing Entity <comparator_or> in library <work> (Architecture <behavioral>).
+Entity <comparator_or> analyzed. Unit <comparator_or> generated.
+
+
+=========================================================================
+*                           HDL Synthesis                               *
+=========================================================================
+
+Performing bidirectional port resolution...
+
+Synthesizing Unit <memoria>.
+    Related source file is "C:/Users/Usuario/Desktop/calc_media_arit updated/memoria.vhd".
+    Found 6x8-bit ROM for signal <mem_value$mux0000> created at line 27.
+    Found 32-bit up counter for signal <counter>.
+    Found 8-bit register for signal <mem_value>.
+    Summary:
+	inferred   1 ROM(s).
+	inferred   1 Counter(s).
+Unit <memoria> synthesized.
+
+
+Synthesizing Unit <bc>.
+    Related source file is "C:/Users/Usuario/Desktop/calc_media_arit updated/bc.vhd".
+    Found finite state machine <FSM_0> for signal <estado>.
+    -----------------------------------------------------------------------
+    | States             | 6                                              |
+    | Transitions        | 8                                              |
+    | Inputs             | 2                                              |
+    | Outputs            | 6                                              |
+    | Clock              | clock                     (rising_edge)        |
+    | Reset              | reset                     (positive)           |
+    | Reset type         | asynchronous                                   |
+    | Reset State        | start                                          |
+    | Power Up State     | start                                          |
+    | Encoding           | automatic                                      |
+    | Implementation     | automatic                                      |
+    -----------------------------------------------------------------------
+    Summary:
+	inferred   1 Finite State Machine(s).
+Unit <bc> synthesized.
+
+
+Synthesizing Unit <reg>.
+    Related source file is "C:/Users/Usuario/Desktop/calc_media_arit updated/register.vhd".
+WARNING:Xst:1780 - Signal <temp> is never used or assigned. This unconnected signal will be trimmed during the optimization process.
+    Found 8-bit register for signal <stored>.
+Unit <reg> synthesized.
+
+
+Synthesizing Unit <mux>.
+    Related source file is "C:/Users/Usuario/Desktop/calc_media_arit updated/mux.vhd".
+WARNING:Xst:1780 - Signal <temp> is never used or assigned. This unconnected signal will be trimmed during the optimization process.
+Unit <mux> synthesized.
+
+
+Synthesizing Unit <alu>.
+    Related source file is "C:/Users/Usuario/Desktop/calc_media_arit updated/alu.vhd".
+WARNING:Xst:1780 - Signal <temp> is never used or assigned. This unconnected signal will be trimmed during the optimization process.
+    Found 8-bit addsub for signal <s>.
+    Summary:
+	inferred   1 Adder/Subtractor(s).
+Unit <alu> synthesized.
+
+
+Synthesizing Unit <adder>.
+    Related source file is "C:/Users/Usuario/Desktop/calc_media_arit updated/adder.vhd".
+    Found 8-bit adder for signal <s>.
+    Summary:
+	inferred   1 Adder/Subtractor(s).
+Unit <adder> synthesized.
+
+
+Synthesizing Unit <comparator_zero>.
+    Related source file is "C:/Users/Usuario/Desktop/calc_media_arit updated/comparator_zero.vhd".
+Unit <comparator_zero> synthesized.
+
+
+Synthesizing Unit <comparator>.
+    Related source file is "C:/Users/Usuario/Desktop/calc_media_arit updated/comparator.vhd".
+    Found 8-bit comparator greater for signal <s$cmp_gt0000> created at line 13.
+    Summary:
+	inferred   1 Comparator(s).
+Unit <comparator> synthesized.
+
+
+Synthesizing Unit <comparator_or>.
+    Related source file is "C:/Users/Usuario/Desktop/calc_media_arit updated/comparator_or.vhd".
+Unit <comparator_or> synthesized.
+
+
+Synthesizing Unit <bo>.
+    Related source file is "C:/Users/Usuario/Desktop/calc_media_arit updated/bo.vhd".
+WARNING:Xst:647 - Input <reset_resultado> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+WARNING:Xst:647 - Input <reset_counter> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+WARNING:Xst:647 - Input <reset_acumulador> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+WARNING:Xst:1780 - Signal <not_memoria_lida> is never used or assigned. This unconnected signal will be trimmed during the optimization process.
+WARNING:Xst:1780 - Signal <mux_result_counter_out> is never used or assigned. This unconnected signal will be trimmed during the optimization process.
+WARNING:Xst:1780 - Signal <compare_or_out> is never used or assigned. This unconnected signal will be trimmed during the optimization process.
+Unit <bo> synthesized.
+
+
+Synthesizing Unit <maquina>.
+    Related source file is "C:/Users/Usuario/Desktop/calc_media_arit updated/maquina.vhd".
+Unit <maquina> synthesized.
+
+INFO:Xst:1767 - HDL ADVISOR - Resource sharing has identified that some arithmetic operations in this design can share the same physical resources for reduced device utilization. For improved clock frequency you may try to disable resource sharing.
+
+=========================================================================
+HDL Synthesis Report
+
+Macro Statistics
+# ROMs                                                 : 1
+ 6x8-bit ROM                                           : 1
+# Adders/Subtractors                                   : 3
+ 8-bit adder                                           : 2
+ 8-bit addsub                                          : 1
+# Counters                                             : 1
+ 32-bit up counter                                     : 1
+# Registers                                            : 4
+ 8-bit register                                        : 4
+# Comparators                                          : 1
+ 8-bit comparator greater                              : 1
+
+=========================================================================
+
+=========================================================================
+*                       Advanced HDL Synthesis                          *
+=========================================================================
+
+Analyzing FSM <FSM_0> for best encoding.
+Optimizing FSM <ctrl_block/estado/FSM> on signal <estado[1:6]> with one-hot encoding.
+---------------------------------
+ State               | Encoding
+---------------------------------
+ start               | 000001
+ request             | 000010
+ check_memory        | 000100
+ sum                 | 001000
+ check_memory_result | 010000
+ subtract            | 100000
+---------------------------------
+
+=========================================================================
+Advanced HDL Synthesis Report
+
+Macro Statistics
+# FSMs                                                 : 1
+# ROMs                                                 : 1
+ 6x8-bit ROM                                           : 1
+# Adders/Subtractors                                   : 3
+ 8-bit adder                                           : 2
+ 8-bit addsub                                          : 1
+# Counters                                             : 1
+ 32-bit up counter                                     : 1
+
+=========================================================================
+
+=========================================================================
+*                         Low Level Synthesis                           *
+=========================================================================
+WARNING:Xst:2677 - Node <counter_3> of sequential type is unconnected in block <memoria>.
+WARNING:Xst:2677 - Node <counter_4> of sequential type is unconnected in block <memoria>.
+WARNING:Xst:2677 - Node <counter_5> of sequential type is unconnected in block <memoria>.
+WARNING:Xst:2677 - Node <counter_6> of sequential type is unconnected in block <memoria>.
+WARNING:Xst:2677 - Node <counter_7> of sequential type is unconnected in block <memoria>.
+WARNING:Xst:2677 - Node <counter_8> of sequential type is unconnected in block <memoria>.
+WARNING:Xst:2677 - Node <counter_9> of sequential type is unconnected in block <memoria>.
+WARNING:Xst:2677 - Node <counter_10> of sequential type is unconnected in block <memoria>.
+WARNING:Xst:2677 - Node <counter_11> of sequential type is unconnected in block <memoria>.
+WARNING:Xst:2677 - Node <counter_12> of sequential type is unconnected in block <memoria>.
+WARNING:Xst:2677 - Node <counter_13> of sequential type is unconnected in block <memoria>.
+WARNING:Xst:2677 - Node <counter_14> of sequential type is unconnected in block <memoria>.
+WARNING:Xst:2677 - Node <counter_15> of sequential type is unconnected in block <memoria>.
+WARNING:Xst:2677 - Node <counter_16> of sequential type is unconnected in block <memoria>.
+WARNING:Xst:2677 - Node <counter_17> of sequential type is unconnected in block <memoria>.
+WARNING:Xst:2677 - Node <counter_18> of sequential type is unconnected in block <memoria>.
+WARNING:Xst:2677 - Node <counter_19> of sequential type is unconnected in block <memoria>.
+WARNING:Xst:2677 - Node <counter_20> of sequential type is unconnected in block <memoria>.
+WARNING:Xst:2677 - Node <counter_21> of sequential type is unconnected in block <memoria>.
+WARNING:Xst:2677 - Node <counter_22> of sequential type is unconnected in block <memoria>.
+WARNING:Xst:2677 - Node <counter_23> of sequential type is unconnected in block <memoria>.
+WARNING:Xst:2677 - Node <counter_24> of sequential type is unconnected in block <memoria>.
+WARNING:Xst:2677 - Node <counter_25> of sequential type is unconnected in block <memoria>.
+WARNING:Xst:2677 - Node <counter_26> of sequential type is unconnected in block <memoria>.
+WARNING:Xst:2677 - Node <counter_27> of sequential type is unconnected in block <memoria>.
+WARNING:Xst:2677 - Node <counter_28> of sequential type is unconnected in block <memoria>.
+WARNING:Xst:2677 - Node <counter_29> of sequential type is unconnected in block <memoria>.
+WARNING:Xst:2677 - Node <counter_30> of sequential type is unconnected in block <memoria>.
+WARNING:Xst:2677 - Node <counter_31> of sequential type is unconnected in block <memoria>.
+INFO:Xst:2261 - The FF/Latch <mem_value_7> in Unit <memoria> is equivalent to the following 3 FFs/Latches, which will be removed : <mem_value_6> <mem_value_5> <mem_value_3> 
+
+Optimizing unit <maquina> ...
+
+Optimizing unit <mux> ...
+
+Optimizing unit <comparator_zero> ...
+
+Optimizing unit <comparator_or> ...
+
+Optimizing unit <bc> ...
+  implementation constraint: INIT=r	 : estado_FSM_FFd1
+  implementation constraint: INIT=r	 : estado_FSM_FFd2
+  implementation constraint: INIT=r	 : estado_FSM_FFd3
+  implementation constraint: INIT=r	 : estado_FSM_FFd4
+  implementation constraint: INIT=r	 : estado_FSM_FFd5
+  implementation constraint: INIT=s	 : estado_FSM_FFd6
+
+Optimizing unit <comparator> ...
+
+Optimizing unit <reg> ...
+
+Optimizing unit <adder> ...
+
+Optimizing unit <memoria> ...
+  implementation constraint: INIT=r	 : counter_2
+  implementation constraint: INIT=r	 : counter_1
+  implementation constraint: INIT=r	 : counter_0
+
+Optimizing unit <alu> ...
+
+Optimizing unit <bo> ...
+
+=========================================================================
+*                           Partition Report                            *
+=========================================================================
+
+Partition Implementation Status
+-------------------------------
+
+  No Partitions were found in this design.
+
+-------------------------------
+
+=========================================================================
+*                            Final Report                               *
+=========================================================================
+Final Results
+RTL Top Level Output File Name     : maquina.ngr
+Top Level Output File Name         : maquina
+Output Format                      : NGC
+Optimization Goal                  : Speed
+Keep Hierarchy                     : Yes
+Target Technology                  : Automotive CoolRunner2
+Macro Preserve                     : YES
+XOR Preserve                       : YES
+Clock Enable                       : YES
+wysiwyg                            : NO
+
+Design Statistics
+# IOs                              : 51
+
+Cell Usage :
+# BELS                             : 218
+#      AND2                        : 71
+#      AND3                        : 5
+#      AND5                        : 1
+#      AND8                        : 1
+#      GND                         : 1
+#      INV                         : 56
+#      OR2                         : 41
+#      OR3                         : 1
+#      OR4                         : 1
+#      XOR2                        : 40
+# FlipFlops/Latches                : 38
+#      FDC                         : 5
+#      FDCE                        : 32
+#      FDP                         : 1
+# IO Buffers                       : 51
+#      IBUF                        : 2
+#      OBUF                        : 49
+=========================================================================
+
+
+Total REAL time to Xst completion: 5.00 secs
+Total CPU time to Xst completion: 4.85 secs
+ 
+--> 
+
+Total memory usage is 260412 kilobytes
+
+Number of errors   :    0 (   0 filtered)
+Number of warnings :   39 (   0 filtered)
+Number of infos    :   11 (   0 filtered)
+

@@ -1,66 +1,89 @@
-V3 48
+V3 58
+FL "C:/Users/Usuario/Desktop/calc_media_arit updated/adder.vhd" 2018/06/10.16:59:08 P.28xd
+EN work/adder 1528757553 \
+      FL "C:/Users/Usuario/Desktop/calc_media_arit updated/adder.vhd" \
+      PB ieee/std_logic_1164 1341906176 PB ieee/STD_LOGIC_UNSIGNED 1341906179
+AR work/adder/behavior 1528757554 \
+      FL "C:/Users/Usuario/Desktop/calc_media_arit updated/adder.vhd" \
+      EN work/adder 1528757553
+FL "C:/Users/Usuario/Desktop/calc_media_arit updated/alu.vhd" 2018/06/10.19:37:18 P.28xd
+EN work/alu 1528757551 \
+      FL "C:/Users/Usuario/Desktop/calc_media_arit updated/alu.vhd" \
+      PB ieee/std_logic_1164 1341906176 PB ieee/STD_LOGIC_UNSIGNED 1341906179
+AR work/alu/Behavioral 1528757552 \
+      FL "C:/Users/Usuario/Desktop/calc_media_arit updated/alu.vhd" EN work/alu 1528757551
+FL "C:/Users/Usuario/Desktop/calc_media_arit updated/bc.vhd" 2018/06/11.17:41:23 P.28xd
+EN work/bc 1528757563 \
+      FL "C:/Users/Usuario/Desktop/calc_media_arit updated/bc.vhd" \
+      PB ieee/std_logic_1164 1341906176
+AR work/bc/Behavioral 1528757564 \
+      FL "C:/Users/Usuario/Desktop/calc_media_arit updated/bc.vhd" EN work/bc 1528757563
+FL "C:/Users/Usuario/Desktop/calc_media_arit updated/bo.vhd" 2018/06/11.17:25:23 P.28xd
+EN work/bo 1528757565 \
+      FL "C:/Users/Usuario/Desktop/calc_media_arit updated/bo.vhd" \
+      PB ieee/std_logic_1164 1341906176
+AR work/bo/Behavioral 1528757566 \
+      FL "C:/Users/Usuario/Desktop/calc_media_arit updated/bo.vhd" EN work/bo 1528757565 \
+      CP reg CP mux CP alu CP adder CP comparator_zero CP comparator CP comparator_or
+FL "C:/Users/Usuario/Desktop/calc_media_arit updated/comparator.vhd" 2018/06/10.16:59:08 P.28xd
+EN work/comparator 1528757557 \
+      FL "C:/Users/Usuario/Desktop/calc_media_arit updated/comparator.vhd" \
+      PB ieee/std_logic_1164 1341906176
+AR work/comparator/Behavioral 1528757558 \
+      FL "C:/Users/Usuario/Desktop/calc_media_arit updated/comparator.vhd" \
+      EN work/comparator 1528757557
+FL "C:/Users/Usuario/Desktop/calc_media_arit updated/comparator_or.vhd" 2018/06/10.16:59:08 P.28xd
+EN work/comparator_or 1528757559 \
+      FL "C:/Users/Usuario/Desktop/calc_media_arit updated/comparator_or.vhd" \
+      PB ieee/std_logic_1164 1341906176 PB ieee/STD_LOGIC_UNSIGNED 1341906179
+AR work/comparator_or/Behavioral 1528757560 \
+      FL "C:/Users/Usuario/Desktop/calc_media_arit updated/comparator_or.vhd" \
+      EN work/comparator_or 1528757559
+FL "C:/Users/Usuario/Desktop/calc_media_arit updated/comparator_zero.vhd" 2018/06/10.16:59:08 P.28xd
+EN work/comparator_zero 1528757555 \
+      FL "C:/Users/Usuario/Desktop/calc_media_arit updated/comparator_zero.vhd" \
+      PB ieee/std_logic_1164 1341906176 PB ieee/STD_LOGIC_UNSIGNED 1341906179
+AR work/comparator_zero/Behavioral 1528757556 \
+      FL "C:/Users/Usuario/Desktop/calc_media_arit updated/comparator_zero.vhd" \
+      EN work/comparator_zero 1528757555
+FL "C:/Users/Usuario/Desktop/calc_media_arit updated/maquina.vhd" 2018/06/11.19:45:52 P.28xd
+EN work/maquina 1528757567 \
+      FL "C:/Users/Usuario/Desktop/calc_media_arit updated/maquina.vhd" \
+      PB ieee/std_logic_1164 1341906176
+AR work/maquina/Behavioral 1528757568 \
+      FL "C:/Users/Usuario/Desktop/calc_media_arit updated/maquina.vhd" \
+      EN work/maquina 1528757567 CP memoria CP bc CP bo
+FL "C:/Users/Usuario/Desktop/calc_media_arit updated/memoria.vhd" 2018/06/11.17:39:05 P.28xd
+EN work/memoria 1528757561 \
+      FL "C:/Users/Usuario/Desktop/calc_media_arit updated/memoria.vhd" \
+      PB ieee/std_logic_1164 1341906176
+AR work/memoria/Behavioral 1528757562 \
+      FL "C:/Users/Usuario/Desktop/calc_media_arit updated/memoria.vhd" \
+      EN work/memoria 1528757561
+FL "C:/Users/Usuario/Desktop/calc_media_arit updated/mux.vhd" 2018/06/10.18:37:07 P.28xd
+EN work/mux 1528757549 \
+      FL "C:/Users/Usuario/Desktop/calc_media_arit updated/mux.vhd" \
+      PB ieee/std_logic_1164 1341906176
+AR work/mux/Behavioral 1528757550 \
+      FL "C:/Users/Usuario/Desktop/calc_media_arit updated/mux.vhd" EN work/mux 1528757549
+FL "C:/Users/Usuario/Desktop/calc_media_arit updated/register.vhd" 2018/06/10.22:39:25 P.28xd
+EN work/reg 1528757547 \
+      FL "C:/Users/Usuario/Desktop/calc_media_arit updated/register.vhd" \
+      PB ieee/std_logic_1164 1341906176
+AR work/reg/Behavioral 1528757548 \
+      FL "C:/Users/Usuario/Desktop/calc_media_arit updated/register.vhd" \
+      EN work/reg 1528757547
 FL C:/Users/Usuario/Desktop/calc_media_arit/adder.vhd 2018/06/01.16:50:07 P.28xd
-EN work/adder 1527890492 FL C:/Users/Usuario/Desktop/calc_media_arit/adder.vhd \
-      PB ieee/std_logic_1164 1341906176 PB ieee/STD_LOGIC_UNSIGNED 1341906179
-AR work/adder/behavior 1527890493 \
-      FL C:/Users/Usuario/Desktop/calc_media_arit/adder.vhd EN work/adder 1527890492
 FL C:/Users/Usuario/Desktop/calc_media_arit/alu.vhd 2018/06/01.18:53:40 P.28xd
-EN work/alu 1527890490 FL C:/Users/Usuario/Desktop/calc_media_arit/alu.vhd \
-      PB ieee/std_logic_1164 1341906176 PB ieee/STD_LOGIC_UNSIGNED 1341906179
-AR work/alu/Behavioral 1527890491 \
-      FL C:/Users/Usuario/Desktop/calc_media_arit/alu.vhd EN work/alu 1527890490
 FL C:/Users/Usuario/Desktop/calc_media_arit/bc.vhd 2018/06/01.18:21:10 P.28xd
-EN work/bc 1527888072 FL C:/Users/Usuario/Desktop/calc_media_arit/bc.vhd \
-      PB ieee/std_logic_1164 1341906176
-AR work/bc/Behavioral 1527888073 \
-      FL C:/Users/Usuario/Desktop/calc_media_arit/bc.vhd EN work/bc 1527888072
 FL C:/Users/Usuario/Desktop/calc_media_arit/bo.vhd 2018/06/01.19:01:21 P.28xd
-EN work/bo 1527890500 FL C:/Users/Usuario/Desktop/calc_media_arit/bo.vhd \
-      PB ieee/std_logic_1164 1341906176
-AR work/bo/Behavioral 1527890501 \
-      FL C:/Users/Usuario/Desktop/calc_media_arit/bo.vhd EN work/bo 1527890500 \
-      CP not_logic CP reg CP mux CP alu CP adder CP comparator_zero CP comparator \
-      CP comparator_or
 FL C:/Users/Usuario/Desktop/calc_media_arit/check_menor.vhd 2018/05/22.23:33:46 P.28xd
 FL C:/Users/Usuario/Desktop/calc_media_arit/comparator.vhd 2018/05/31.19:20:57 P.28xd
-EN work/comparator 1527890496 \
-      FL C:/Users/Usuario/Desktop/calc_media_arit/comparator.vhd \
-      PB ieee/std_logic_1164 1341906176
-AR work/comparator/Behavioral 1527890497 \
-      FL C:/Users/Usuario/Desktop/calc_media_arit/comparator.vhd \
-      EN work/comparator 1527890496
 FL C:/Users/Usuario/Desktop/calc_media_arit/comparator_or.vhd 2018/05/31.19:20:57 P.28xd
-EN work/comparator_or 1527890498 \
-      FL C:/Users/Usuario/Desktop/calc_media_arit/comparator_or.vhd \
-      PB ieee/std_logic_1164 1341906176 PB ieee/STD_LOGIC_UNSIGNED 1341906179
-AR work/comparator_or/Behavioral 1527890499 \
-      FL C:/Users/Usuario/Desktop/calc_media_arit/comparator_or.vhd \
-      EN work/comparator_or 1527890498
 FL C:/Users/Usuario/Desktop/calc_media_arit/comparator_zero.vhd 2018/06/01.18:49:32 P.28xd
-EN work/comparator_zero 1527890494 \
-      FL C:/Users/Usuario/Desktop/calc_media_arit/comparator_zero.vhd \
-      PB ieee/std_logic_1164 1341906176 PB ieee/STD_LOGIC_UNSIGNED 1341906179
-AR work/comparator_zero/Behavioral 1527890495 \
-      FL C:/Users/Usuario/Desktop/calc_media_arit/comparator_zero.vhd \
-      EN work/comparator_zero 1527890494
 FL C:/Users/Usuario/Desktop/calc_media_arit/maquina.vhd 2018/05/28.00:33:57 P.28xd
-EN work/maquina 1527478470 \
-      FL C:/Users/Usuario/Desktop/calc_media_arit/maquina.vhd \
-      PB ieee/std_logic_1164 1341906176
-AR work/maquina/Behavioral 1527478471 \
-      FL C:/Users/Usuario/Desktop/calc_media_arit/maquina.vhd EN work/maquina 1527478470 \
-      CP memoria CP bo CP bc
 FL C:/Users/Usuario/Desktop/calc_media_arit/memoria.vhd 2018/05/28.00:04:22 P.28xd
-EN work/memoria 1527478464 \
-      FL C:/Users/Usuario/Desktop/calc_media_arit/memoria.vhd \
-      PB ieee/std_logic_1164 1341906176
-AR work/memoria/Behavioral 1527478465 \
-      FL C:/Users/Usuario/Desktop/calc_media_arit/memoria.vhd EN work/memoria 1527478464
 FL C:/Users/Usuario/Desktop/calc_media_arit/mux.vhd 2018/05/31.19:20:57 P.28xd
-EN work/mux 1527890488 FL C:/Users/Usuario/Desktop/calc_media_arit/mux.vhd \
-      PB ieee/std_logic_1164 1341906176
-AR work/mux/Behavioral 1527890489 \
-      FL C:/Users/Usuario/Desktop/calc_media_arit/mux.vhd EN work/mux 1527890488
 FL C:/Users/Usuario/Desktop/calc_media_arit/not_logic.vhd 2018/06/01.19:00:17 P.28xd
 EN work/not_logic 1527890484 \
       FL C:/Users/Usuario/Desktop/calc_media_arit/not_logic.vhd \
@@ -68,7 +91,3 @@ EN work/not_logic 1527890484 \
 AR work/not_logic/Behavioral 1527890485 \
       FL C:/Users/Usuario/Desktop/calc_media_arit/not_logic.vhd EN work/not_logic 1527890484
 FL C:/Users/Usuario/Desktop/calc_media_arit/register.vhd 2018/06/01.18:53:13 P.28xd
-EN work/reg 1527890486 FL C:/Users/Usuario/Desktop/calc_media_arit/register.vhd \
-      PB ieee/std_logic_1164 1341906176
-AR work/reg/Behavioral 1527890487 \
-      FL C:/Users/Usuario/Desktop/calc_media_arit/register.vhd EN work/reg 1527890486

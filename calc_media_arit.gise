@@ -22,7 +22,8 @@
   <sourceproject xmlns="http://www.xilinx.com/XMLSchema" xil_pn:fileType="FILE_XISE" xil_pn:name="calc_media_arit.xise"/>
 
   <files xmlns="http://www.xilinx.com/XMLSchema">
-    <file xil_pn:fileType="FILE_LSO" xil_pn:name=".lso"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_LSO" xil_pn:name=".lso"/>
+    <file xil_pn:fileType="FILE_XMSGS" xil_pn:name="_xmsgs/xst.xmsgs"/>
     <file xil_pn:fileType="FILE_XST_PROJECT" xil_pn:name="adder.prj"/>
     <file xil_pn:fileType="FILE_XST_STX" xil_pn:name="adder.stx"/>
     <file xil_pn:fileType="FILE_XST" xil_pn:name="adder.xst"/>
@@ -38,29 +39,43 @@
     <file xil_pn:fileType="FILE_XST" xil_pn:name="bo.xst"/>
     <file xil_pn:branch="BehavioralSim" xil_pn:fileType="FILE_ISIM_EXE" xil_pn:name="bo_isim_beh.exe"/>
     <file xil_pn:fileType="FILE_XST_PROJECT" xil_pn:name="bo_stx_beh.prj"/>
-    <file xil_pn:fileType="FILE_XST_PROJECT" xil_pn:name="bo_tb_beh.prj"/>
     <file xil_pn:branch="BehavioralSim" xil_pn:fileType="FILE_ISIM_EXE" xil_pn:name="bo_tb_isim_beh.exe"/>
-    <file xil_pn:fileType="FILE_ISIM_MISC" xil_pn:name="bo_tb_isim_beh.wdb"/>
     <file xil_pn:fileType="FILE_XST_PROJECT" xil_pn:name="bo_tb_stx_beh.prj"/>
+    <file xil_pn:fileType="FILE_XST_PROJECT" xil_pn:name="comparator_stx_beh.prj"/>
     <file xil_pn:fileType="FILE_LOG" xil_pn:name="fuse.log"/>
     <file xil_pn:fileType="FILE_DIRECTORY" xil_pn:name="isim"/>
     <file xil_pn:branch="BehavioralSim" xil_pn:fileType="FILE_CMD" xil_pn:name="isim.cmd"/>
     <file xil_pn:branch="BehavioralSim" xil_pn:fileType="FILE_LOG" xil_pn:name="isim.log"/>
-    <file xil_pn:fileType="FILE_XST_PROJECT" xil_pn:name="maquina.prj"/>
-    <file xil_pn:fileType="FILE_XST_STX" xil_pn:name="maquina.stx"/>
-    <file xil_pn:fileType="FILE_XST" xil_pn:name="maquina.xst"/>
-    <file xil_pn:fileType="FILE_XST_PROJECT" xil_pn:name="maquina_stx_beh.prj"/>
+    <file xil_pn:fileType="FILE_CMD_LOG" xil_pn:name="maquina.cmd_log"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_LSO" xil_pn:name="maquina.lso"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_NGC" xil_pn:name="maquina.ngc"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_NGR" xil_pn:name="maquina.ngr"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_XST_PROJECT" xil_pn:name="maquina.prj"/>
+    <file xil_pn:fileType="FILE_SPL" xil_pn:name="maquina.spl"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_XST_STX" xil_pn:name="maquina.stx"/>
+    <file xil_pn:fileType="FILE_SYMBOL" xil_pn:name="maquina.sym" xil_pn:origination="imported"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_XST_REPORT" xil_pn:name="maquina.syr"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_XST" xil_pn:name="maquina.xst"/>
+    <file xil_pn:fileType="FILE_HTML" xil_pn:name="maquina_envsettings.html"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_XST_PROJECT" xil_pn:name="maquina_stx_beh.prj"/>
+    <file xil_pn:fileType="FILE_HTML" xil_pn:name="maquina_summary.html"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_XST_PROJECT" xil_pn:name="maquina_tb_beh.prj"/>
     <file xil_pn:branch="BehavioralSim" xil_pn:fileType="FILE_ISIM_EXE" xil_pn:name="maquina_tb_isim_beh.exe"/>
-    <file xil_pn:fileType="FILE_XST_PROJECT" xil_pn:name="maquina_tb_stx_beh.prj"/>
+    <file xil_pn:fileType="FILE_ISIM_MISC" xil_pn:name="maquina_tb_isim_beh.wdb"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_XST_PROJECT" xil_pn:name="maquina_tb_stx_beh.prj"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_XST_PROJECT" xil_pn:name="maquina_vhdl.prj"/>
+    <file xil_pn:fileType="FILE_XRPT" xil_pn:name="maquina_xst.xrpt"/>
     <file xil_pn:branch="BehavioralSim" xil_pn:fileType="FILE_ISIM_EXE" xil_pn:name="memoria_isim_beh.exe"/>
     <file xil_pn:fileType="FILE_XST_PROJECT" xil_pn:name="memoria_stx_beh.prj"/>
     <file xil_pn:branch="BehavioralSim" xil_pn:fileType="FILE_ISIM_EXE" xil_pn:name="memoria_tb_isim_beh.exe"/>
     <file xil_pn:fileType="FILE_XST_PROJECT" xil_pn:name="memoria_tb_stx_beh.prj"/>
     <file xil_pn:branch="BehavioralSim" xil_pn:fileType="FILE_ISIM_EXE" xil_pn:name="mux_isim_beh.exe"/>
     <file xil_pn:fileType="FILE_XST_PROJECT" xil_pn:name="mux_stx_beh.prj"/>
+    <file xil_pn:fileType="FILE_XST_PROJECT" xil_pn:name="reg_stx_beh.prj"/>
     <file xil_pn:branch="BehavioralSim" xil_pn:fileType="FILE_ISIM_EXE" xil_pn:name="reg_tb_isim_beh.exe"/>
     <file xil_pn:fileType="FILE_XST_PROJECT" xil_pn:name="reg_tb_stx_beh.prj"/>
     <file xil_pn:fileType="FILE_XST_PROJECT" xil_pn:name="testbench_stx_beh.prj"/>
+    <file xil_pn:fileType="FILE_FITTER_REPORT" xil_pn:name="webtalk_pn.xml"/>
     <file xil_pn:branch="BehavioralSim" xil_pn:fileType="FILE_INI" xil_pn:name="xilinxsim.ini"/>
     <file xil_pn:fileType="FILE_DIRECTORY" xil_pn:name="xst"/>
   </files>
@@ -70,7 +85,7 @@
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
     </transform>
-    <transform xil_pn:end_ts="1527895432" xil_pn:in_ck="4255031213436762709" xil_pn:name="TRAN_copyAbstractToPostAbstractSimulation" xil_pn:start_ts="1527895432">
+    <transform xil_pn:end_ts="1528770872" xil_pn:in_ck="4255031213436762709" xil_pn:name="TRAN_copyAbstractToPostAbstractSimulation" xil_pn:start_ts="1528770872">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
       <outfile xil_pn:name="adder.vhd"/>
@@ -91,19 +106,13 @@
       <outfile xil_pn:name="reg_tb.vhd"/>
       <outfile xil_pn:name="register.vhd"/>
     </transform>
-    <transform xil_pn:end_ts="1527894417" xil_pn:name="TRAN_schematicsToHdlSim" xil_pn:prop_ck="-2728471741924267990" xil_pn:start_ts="1527894417">
+    <transform xil_pn:end_ts="1528759036" xil_pn:name="TRAN_schematicsToHdlSim" xil_pn:prop_ck="215499301101816005" xil_pn:start_ts="1528759036">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
-      <status xil_pn:value="OutOfDateForProperties"/>
     </transform>
-    <transform xil_pn:end_ts="1527894417" xil_pn:in_ck="4255031213436762709" xil_pn:name="TRAN_copyPostAbstractToPreSimulation" xil_pn:start_ts="1527894417">
+    <transform xil_pn:end_ts="1528770872" xil_pn:in_ck="4255031213436762709" xil_pn:name="TRAN_copyPostAbstractToPreSimulation" xil_pn:start_ts="1528770872">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
-      <status xil_pn:value="OutOfDateForInputs"/>
-      <status xil_pn:value="OutOfDateForPredecessor"/>
-      <status xil_pn:value="OutOfDateForOutputs"/>
-      <status xil_pn:value="InputChanged"/>
-      <status xil_pn:value="OutputChanged"/>
       <outfile xil_pn:name="adder.vhd"/>
       <outfile xil_pn:name="alu.vhd"/>
       <outfile xil_pn:name="bc.vhd"/>
@@ -122,32 +131,55 @@
       <outfile xil_pn:name="reg_tb.vhd"/>
       <outfile xil_pn:name="register.vhd"/>
     </transform>
-    <transform xil_pn:end_ts="1527894426" xil_pn:in_ck="4255031213436762709" xil_pn:name="TRAN_ISimulateBehavioralModelRunFuse" xil_pn:prop_ck="1939196240796828625" xil_pn:start_ts="1527894417">
+    <transform xil_pn:end_ts="1528770876" xil_pn:in_ck="4255031213436762709" xil_pn:name="TRAN_ISimulateBehavioralModelRunFuse" xil_pn:prop_ck="-4017280328274749785" xil_pn:start_ts="1528770872">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
-      <status xil_pn:value="OutOfDateForInputs"/>
-      <status xil_pn:value="OutOfDateForProperties"/>
-      <status xil_pn:value="OutOfDateForPredecessor"/>
-      <status xil_pn:value="OutOfDateForOutputs"/>
-      <status xil_pn:value="InputChanged"/>
-      <status xil_pn:value="OutputChanged"/>
-      <outfile xil_pn:name="bo_tb_beh.prj"/>
-      <outfile xil_pn:name="bo_tb_isim_beh.exe"/>
       <outfile xil_pn:name="fuse.log"/>
       <outfile xil_pn:name="isim"/>
       <outfile xil_pn:name="isim.log"/>
+      <outfile xil_pn:name="maquina_tb_beh.prj"/>
+      <outfile xil_pn:name="maquina_tb_isim_beh.exe"/>
       <outfile xil_pn:name="xilinxsim.ini"/>
     </transform>
-    <transform xil_pn:end_ts="1527894426" xil_pn:in_ck="-4147527111823252544" xil_pn:name="TRAN_ISimulateBehavioralModel" xil_pn:prop_ck="-4464081182245135010" xil_pn:start_ts="1527894426">
+    <transform xil_pn:end_ts="1528770876" xil_pn:in_ck="-4147527111823252544" xil_pn:name="TRAN_ISimulateBehavioralModel" xil_pn:prop_ck="-5887688293908405580" xil_pn:start_ts="1528770876">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
-      <status xil_pn:value="OutOfDateForProperties"/>
-      <status xil_pn:value="OutOfDateForPredecessor"/>
-      <status xil_pn:value="OutOfDateForOutputs"/>
-      <status xil_pn:value="OutputChanged"/>
-      <outfile xil_pn:name="bo_tb_isim_beh.wdb"/>
       <outfile xil_pn:name="isim.cmd"/>
       <outfile xil_pn:name="isim.log"/>
+      <outfile xil_pn:name="maquina_tb_isim_beh.wdb"/>
+    </transform>
+    <transform xil_pn:end_ts="1528756664" xil_pn:name="TRAN_copyInitialToXSTAbstractSynthesis" xil_pn:start_ts="1528756664">
+      <status xil_pn:value="SuccessfullyRun"/>
+      <status xil_pn:value="ReadyToRun"/>
+    </transform>
+    <transform xil_pn:end_ts="1528756664" xil_pn:name="TRAN_schematicsToHdl" xil_pn:prop_ck="2622489900988150365" xil_pn:start_ts="1528756664">
+      <status xil_pn:value="SuccessfullyRun"/>
+      <status xil_pn:value="ReadyToRun"/>
+    </transform>
+    <transform xil_pn:end_ts="1528757553" xil_pn:in_ck="5309765513503090866" xil_pn:name="TRANEXT_xstsynthesize_xbr" xil_pn:prop_ck="7193014331860270506" xil_pn:start_ts="1528757545">
+      <status xil_pn:value="SuccessfullyRun"/>
+      <status xil_pn:value="WarningsGenerated"/>
+      <status xil_pn:value="ReadyToRun"/>
+      <status xil_pn:value="OutOfDateForInputs"/>
+      <status xil_pn:value="OutOfDateForOutputs"/>
+      <status xil_pn:value="InputChanged"/>
+      <status xil_pn:value="OutputChanged"/>
+      <outfile xil_pn:name=".lso"/>
+      <outfile xil_pn:name="_xmsgs/xst.xmsgs"/>
+      <outfile xil_pn:name="maquina.lso"/>
+      <outfile xil_pn:name="maquina.ngc"/>
+      <outfile xil_pn:name="maquina.ngr"/>
+      <outfile xil_pn:name="maquina.prj"/>
+      <outfile xil_pn:name="maquina.stx"/>
+      <outfile xil_pn:name="maquina.syr"/>
+      <outfile xil_pn:name="maquina.xst"/>
+      <outfile xil_pn:name="maquina_stx_beh.prj"/>
+      <outfile xil_pn:name="maquina_tb_beh.prj"/>
+      <outfile xil_pn:name="maquina_tb_stx_beh.prj"/>
+      <outfile xil_pn:name="maquina_vhdl.prj"/>
+      <outfile xil_pn:name="maquina_xst.xrpt"/>
+      <outfile xil_pn:name="webtalk_pn.xml"/>
+      <outfile xil_pn:name="xst"/>
     </transform>
   </transforms>
 

@@ -1,68 +1,27 @@
---------------------------------------------------------------------------------
--- Company: 
--- Engineer:
---
--- Create Date:   14:06:11 05/28/2018
--- Design Name:   
--- Module Name:   C:/Users/Usuario/Desktop/calc_media_arit/maquina_tb.vhd
--- Project Name:  calc_media_arit
--- Target Device:  
--- Tool versions:  
--- Description:   
--- 
--- VHDL Test Bench Created by ISE for module: maquina
--- 
--- Dependencies:
--- 
--- Revision:
--- Revision 0.01 - File Created
--- Additional Comments:
---
--- Notes: 
--- This testbench has been automatically generated using types std_logic and
--- std_logic_vector for the ports of the unit under test.  Xilinx recommends
--- that these types always be used for the top-level I/O of a design in order
--- to guarantee that the testbench will bind correctly to the post-implementation 
--- simulation model.
---------------------------------------------------------------------------------
 LIBRARY ieee;
 USE ieee.std_logic_1164.ALL;
- 
--- Uncomment the following library declaration if using
--- arithmetic functions with Signed or Unsigned values
---USE ieee.numeric_std.ALL;
  
 ENTITY maquina_tb IS
 END maquina_tb;
  
 ARCHITECTURE behavior OF maquina_tb IS 
- 
-    -- Component Declaration for the Unit Under Test (UUT)
- 
-    --COMPONENT maquina
-    --PORT(
-         --clock : IN  std_logic;
-         --reset : IN  std_logic;
-         --buffer_a_ula : OUT  std_logic_vector(7 downto 0);
-         --buffer_b_ula : OUT  std_logic_vector(7 downto 0);
-         --buffer_contador : OUT  std_logic_vector(7 downto 0);
-         --result : OUT  std_logic_vector(7 downto 0)
-        --);
-    --END COMPONENT;
-    
 
    --Inputs
    signal clock : std_logic := '0';
-   signal reset : std_logic := '0';
+   signal reset : std_logic;
 
  	--Outputs
-   signal buffer_a_ula : std_logic_vector(7 downto 0);
-   signal buffer_b_ula : std_logic_vector(7 downto 0);
-   signal buffer_contador : std_logic_vector(7 downto 0);
-   signal result : std_logic_vector(7 downto 0);
-
+	signal valor_memoria : std_logic_vector(7 downto 0);
+	signal memoria_vazia, enviar : std_logic;
+   signal buffer_acumulador : std_logic_vector(7 downto 0);
+   signal buffer_counter : std_logic_vector(7 downto 0);
+   signal buffer_resultado : std_logic_vector(7 downto 0);
+	signal resultado_pronto : std_logic;
+	signal set_acumulador,   set_counter,   set_resultado : std_logic := '0';
+	signal reset_acumulador, reset_counter, reset_resultado : std_logic := '1';
+	signal resultado : std_logic_vector(7 downto 0);
    -- Clock period definitions
-   constant clock_period : time := 10 ns;
+   constant clock_period : time := 20 ns;
  
 BEGIN
  
@@ -70,10 +29,20 @@ BEGIN
    uut: entity work.maquina PORT MAP (
           clock => clock,
           reset => reset,
-          buffer_a_ula => buffer_a_ula,
-          buffer_b_ula => buffer_b_ula,
-          buffer_contador => buffer_contador,
-          result => result
+			 valor_memoria => valor_memoria,
+			 memoria_vazia => memoria_vazia,
+          buffer_acumulador => buffer_acumulador,
+          buffer_counter    => buffer_counter,
+          buffer_resultado  => buffer_resultado,
+			 resultado_pronto => resultado_pronto,
+			 set_acumulador => set_acumulador,
+			 reset_acumulador => reset_acumulador,
+			 set_counter => set_counter,
+			 reset_counter => reset_counter,
+			 set_resultado => set_resultado,
+			 reset_resultado => reset_resultado,
+			 enviar => enviar,
+          resultado => resultado
         );
 
    -- Clock process definitions
@@ -85,7 +54,7 @@ BEGIN
 		wait for clock_period/2;
    end process;
  
-	reset <= '1', '0' after 20 ns;
+	reset <= '1', '0' after 5 ns;
  
 
 END;

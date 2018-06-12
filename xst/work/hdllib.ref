@@ -1,24 +1,24 @@
-EN adder NULL C:/Users/Usuario/Desktop/calc_media_arit/adder.vhd sub00/vhpl16 1527890492
-EN bc NULL C:/Users/Usuario/Desktop/calc_media_arit/bc.vhd sub00/vhpl00 1527888072
-AR mux behavioral C:/Users/Usuario/Desktop/calc_media_arit/mux.vhd sub00/vhpl05 1527890489
+EN adder NULL "C:/Users/Usuario/Desktop/calc_media_arit updated/adder.vhd" sub00/vhpl16 1528757553
+EN bc NULL "C:/Users/Usuario/Desktop/calc_media_arit updated/bc.vhd" sub00/vhpl00 1528757563
+AR mux behavioral "C:/Users/Usuario/Desktop/calc_media_arit updated/mux.vhd" sub00/vhpl05 1528757550
 AR not_logic behavioral C:/Users/Usuario/Desktop/calc_media_arit/not_logic.vhd sub00/vhpl19 1527890485
-AR reg behavioral C:/Users/Usuario/Desktop/calc_media_arit/register.vhd sub00/vhpl03 1527890487
-EN bo NULL C:/Users/Usuario/Desktop/calc_media_arit/bo.vhd sub00/vhpl10 1527890500
-AR adder behavior C:/Users/Usuario/Desktop/calc_media_arit/adder.vhd sub00/vhpl17 1527890493
-AR bc behavioral C:/Users/Usuario/Desktop/calc_media_arit/bc.vhd sub00/vhpl01 1527888073
-AR maquina behavioral C:/Users/Usuario/Desktop/calc_media_arit/maquina.vhd sub00/vhpl15 1527478471
-EN comparator_zero NULL C:/Users/Usuario/Desktop/calc_media_arit/comparator_zero.vhd sub00/vhpl20 1527890494
-EN comparator_or NULL C:/Users/Usuario/Desktop/calc_media_arit/comparator_or.vhd sub00/vhpl22 1527890498
-AR comparator_zero behavioral C:/Users/Usuario/Desktop/calc_media_arit/comparator_zero.vhd sub00/vhpl21 1527890495
+AR reg behavioral "C:/Users/Usuario/Desktop/calc_media_arit updated/register.vhd" sub00/vhpl03 1528757548
+EN bo NULL "C:/Users/Usuario/Desktop/calc_media_arit updated/bo.vhd" sub00/vhpl10 1528757565
+AR adder behavior "C:/Users/Usuario/Desktop/calc_media_arit updated/adder.vhd" sub00/vhpl17 1528757554
+AR bc behavioral "C:/Users/Usuario/Desktop/calc_media_arit updated/bc.vhd" sub00/vhpl01 1528757564
+AR maquina behavioral "C:/Users/Usuario/Desktop/calc_media_arit updated/maquina.vhd" sub00/vhpl15 1528757568
+EN comparator_zero NULL "C:/Users/Usuario/Desktop/calc_media_arit updated/comparator_zero.vhd" sub00/vhpl20 1528757555
+EN comparator_or NULL "C:/Users/Usuario/Desktop/calc_media_arit updated/comparator_or.vhd" sub00/vhpl22 1528757559
+AR comparator_zero behavioral "C:/Users/Usuario/Desktop/calc_media_arit updated/comparator_zero.vhd" sub00/vhpl21 1528757556
 EN not_logic NULL C:/Users/Usuario/Desktop/calc_media_arit/not_logic.vhd sub00/vhpl18 1527890484
-EN memoria NULL C:/Users/Usuario/Desktop/calc_media_arit/memoria.vhd sub00/vhpl12 1527478464
-EN maquina NULL C:/Users/Usuario/Desktop/calc_media_arit/maquina.vhd sub00/vhpl14 1527478470
-EN mux NULL C:/Users/Usuario/Desktop/calc_media_arit/mux.vhd sub00/vhpl04 1527890488
-AR alu behavioral C:/Users/Usuario/Desktop/calc_media_arit/alu.vhd sub00/vhpl07 1527890491
-AR comparator_or behavioral C:/Users/Usuario/Desktop/calc_media_arit/comparator_or.vhd sub00/vhpl23 1527890499
-AR bo behavioral C:/Users/Usuario/Desktop/calc_media_arit/bo.vhd sub00/vhpl11 1527890501
-EN comparator NULL C:/Users/Usuario/Desktop/calc_media_arit/comparator.vhd sub00/vhpl08 1527890496
-EN reg NULL C:/Users/Usuario/Desktop/calc_media_arit/register.vhd sub00/vhpl02 1527890486
-AR comparator behavioral C:/Users/Usuario/Desktop/calc_media_arit/comparator.vhd sub00/vhpl09 1527890497
-EN alu NULL C:/Users/Usuario/Desktop/calc_media_arit/alu.vhd sub00/vhpl06 1527890490
-AR memoria behavioral C:/Users/Usuario/Desktop/calc_media_arit/memoria.vhd sub00/vhpl13 1527478465
+EN memoria NULL "C:/Users/Usuario/Desktop/calc_media_arit updated/memoria.vhd" sub00/vhpl12 1528757561
+EN maquina NULL "C:/Users/Usuario/Desktop/calc_media_arit updated/maquina.vhd" sub00/vhpl14 1528757567
+EN mux NULL "C:/Users/Usuario/Desktop/calc_media_arit updated/mux.vhd" sub00/vhpl04 1528757549
+AR alu behavioral "C:/Users/Usuario/Desktop/calc_media_arit updated/alu.vhd" sub00/vhpl07 1528757552
+AR comparator_or behavioral "C:/Users/Usuario/Desktop/calc_media_arit updated/comparator_or.vhd" sub00/vhpl23 1528757560
+AR bo behavioral "C:/Users/Usuario/Desktop/calc_media_arit updated/bo.vhd" sub00/vhpl11 1528757566
+EN comparator NULL "C:/Users/Usuario/Desktop/calc_media_arit updated/comparator.vhd" sub00/vhpl08 1528757557
+EN reg NULL "C:/Users/Usuario/Desktop/calc_media_arit updated/register.vhd" sub00/vhpl02 1528757547
+AR comparator behavioral "C:/Users/Usuario/Desktop/calc_media_arit updated/comparator.vhd" sub00/vhpl09 1528757558
+EN alu NULL "C:/Users/Usuario/Desktop/calc_media_arit updated/alu.vhd" sub00/vhpl06 1528757551
+AR memoria behavioral "C:/Users/Usuario/Desktop/calc_media_arit updated/memoria.vhd" sub00/vhpl13 1528757562

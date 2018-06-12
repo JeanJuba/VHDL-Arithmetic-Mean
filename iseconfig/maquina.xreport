@@ -1,11 +1,11 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <report-views version="2.0" >
  <header>
-  <DateModified>2018-06-01T13:40:57</DateModified>
+  <DateModified>2018-06-11T23:33:03</DateModified>
   <ModuleName>maquina</ModuleName>
-  <SummaryTimeStamp>Unknown</SummaryTimeStamp>
-  <SavedFilePath>C:/Users/Usuario/Desktop/calc_media_arit/iseconfig/maquina.xreport</SavedFilePath>
-  <ImplementationReportsDirectory>C:/Users/Usuario/Desktop/calc_media_arit\</ImplementationReportsDirectory>
+  <SummaryTimeStamp>2018-06-11T19:38:00</SummaryTimeStamp>
+  <SavedFilePath>C:/Users/Usuario/Desktop/Media Arit/iseconfig/maquina.xreport</SavedFilePath>
+  <ImplementationReportsDirectory>C:/Users/Usuario/Desktop/Media Arit\</ImplementationReportsDirectory>
   <DateInitialized>2018-05-28T13:49:49</DateInitialized>
   <EnableMessageFiltering>false</EnableMessageFiltering>
  </header>

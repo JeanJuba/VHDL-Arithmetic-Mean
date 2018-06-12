@@ -1,0 +1,4 @@
+xst -intstyle ise -ifn "C:/Users/Usuario/Desktop/calc_media_arit updated/maquina.xst" -ofn "C:/Users/Usuario/Desktop/calc_media_arit updated/maquina.syr" 
+vhdtdtfi -lib work register.vhd -lib work mux.vhd -lib work comparator_zero.vhd -lib work comparator_or.vhd -lib work comparator.vhd -lib work alu.vhd -lib work adder.vhd -lib work memoria.vhd -lib work bo.vhd -lib work bc.vhd -lib work maquina.vhd -prj calc_media_arit -o maquina.spl -module maquina -template C:/Xilinx/14.2/ISE_DS/ISE//data/splfile.tft -deleteonerror 
+spl2sym -intstyle ise -family acr2 maquina.spl {C:/Users/Usuario/Desktop/calc_media_arit updated/maquina.sym} 
+xst -intstyle ise -ifn "C:/Users/Usuario/Desktop/calc_media_arit updated/maquina.xst" -ofn "C:/Users/Usuario/Desktop/calc_media_arit updated/maquina.syr" 
