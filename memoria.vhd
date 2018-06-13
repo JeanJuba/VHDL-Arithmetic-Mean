@@ -11,7 +11,7 @@ architecture Behavioral of memoria is
 	
 	type ROM is array (0 to 4) of STD_LOGIC_VECTOR(7 downto 0); --Read only memory
 	
-	constant mem : ROM := (b"00000011", b"00000110", b"00000100", b"00000100", b"11111111"); --"11111111" is the stop value
+	constant mem : ROM := (b"00000011", b"00000011", b"00000011", b"00000011", b"11111111"); --"11111111" is the stop value
 	signal mem_value : STD_LOGIC_VECTOR(7 downto 0);
 	signal empty : STD_LOGIC := '0';
 	

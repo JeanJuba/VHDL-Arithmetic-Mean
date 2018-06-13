@@ -2,12 +2,12 @@ Command line:
    maquina_tb_isim_beh.exe
      -simmode  gui
      -simrunnum  0
-     -socket  55202
+     -socket  50671
 
-Mon Jun 11 23:34:38 2018
+Wed Jun 13 20:51:00 2018
 
 
- Elaboration Time: 0.046801 sec
+ Elaboration Time: 0.0468 sec
 
  Current Memory Usage: 505.647 Meg
 
@@ -22,9 +22,9 @@ Mon Jun 11 23:34:38 2018
 In process memoria.vhd:19 
  
 
- Total Simulation Time: 0.062401 sec
+ Total Simulation Time: 0.0468 sec
 
  Current Memory Usage: 505.647 Meg
 
-Mon Jun 11 23:35:48 2018
+Wed Jun 13 20:51:10 2018
 

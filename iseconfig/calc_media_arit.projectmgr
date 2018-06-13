@@ -10,13 +10,13 @@
          <ClosedNode>/bo - Behavioral C:|Users|m95952|calc_media_arit|bo.vhd/reg_add - reg - Behavioral</ClosedNode>
       </ClosedNodes>
       <SelectedItems>
-         <SelectedItem>maquina - Behavioral (C:/Users/Usuario/Desktop/calc_media_arit updated/maquina.vhd)</SelectedItem>
+         <SelectedItem>maquina - Behavioral (C:/Users/Usuario/Desktop/Media Arit/maquina.vhd)</SelectedItem>
       </SelectedItems>
       <ScrollbarPosition orientation="vertical" >0</ScrollbarPosition>
       <ScrollbarPosition orientation="horizontal" >0</ScrollbarPosition>
       <ViewHeaderState orientation="horizontal" >000000ff000000000000000100000001000000000000000000000000000000000202000000010000000100000064000001d7000000020000000000000000000000000200000064ffffffff000000810000000300000002000001d70000000100000003000000000000000100000003</ViewHeaderState>
       <UserChangedColumnWidths orientation="horizontal" >true</UserChangedColumnWidths>
-      <CurrentItem>maquina - Behavioral (C:/Users/Usuario/Desktop/calc_media_arit updated/maquina.vhd)</CurrentItem>
+      <CurrentItem>maquina - Behavioral (C:/Users/Usuario/Desktop/Media Arit/maquina.vhd)</CurrentItem>
    </ItemView>
    <ItemView engineview="SynthesisOnly" sourcetype="" guiview="Process" >
       <ClosedNodes>
@@ -66,7 +66,7 @@
       </SelectedItems>
       <ScrollbarPosition orientation="vertical" >0</ScrollbarPosition>
       <ScrollbarPosition orientation="horizontal" >0</ScrollbarPosition>
-      <ViewHeaderState orientation="horizontal" >000000ff00000000000000010000000100000000000000000000000000000000000000000000000126000000010000000100000000000000000000000064ffffffff000000810000000000000001000001260000000100000000</ViewHeaderState>
+      <ViewHeaderState orientation="horizontal" >000000ff00000000000000010000000100000000000000000000000000000000000000000000000115000000010000000100000000000000000000000064ffffffff000000810000000000000001000001150000000100000000</ViewHeaderState>
       <UserChangedColumnWidths orientation="horizontal" >false</UserChangedColumnWidths>
       <CurrentItem></CurrentItem>
    </ItemView>
@@ -76,6 +76,7 @@
       <ClosedNodes>
          <ClosedNodesVersion>2</ClosedNodesVersion>
          <ClosedNode>/bc_tb - behavior C:|Users|Usuario|Desktop|calc_media_arit updated|bc_tb.vhd</ClosedNode>
+         <ClosedNode>/bo_tb - behavior C:|Users|Usuario|Desktop|Media Arit|bo_tb.vhd</ClosedNode>
          <ClosedNode>/bo_tb - behavior C:|Users|Usuario|Desktop|calc_media_arit updated|bo_tb.vhd</ClosedNode>
          <ClosedNode>/maquina - Behavioral C:|Users|Usuario|Desktop|calc_media_arit|maquina.vhd/op_block - bo - Behavioral</ClosedNode>
          <ClosedNode>/maquina_tb - behavior C:|Users|Usuario|Desktop|calc_media_arit|maquina_tb.vhd/uut - maquina - Behavioral/op_block - bo - Behavioral</ClosedNode>
@@ -85,13 +86,13 @@
          <ClosedNode>/reg_tb - behavior C:|Users|Usuario|Desktop|calc_media_arit|reg_tb.vhd</ClosedNode>
       </ClosedNodes>
       <SelectedItems>
-         <SelectedItem>maquina_tb - behavior (C:/Users/Usuario/Desktop/calc_media_arit updated/maquina_tb.vhd)</SelectedItem>
+         <SelectedItem>maquina_tb - behavior (C:/Users/Usuario/Desktop/Media Arit/maquina_tb.vhd)</SelectedItem>
       </SelectedItems>
       <ScrollbarPosition orientation="vertical" >2</ScrollbarPosition>
       <ScrollbarPosition orientation="horizontal" >0</ScrollbarPosition>
       <ViewHeaderState orientation="horizontal" >000000ff000000000000000100000001000000000000000000000000000000000202000000010000000100000064000001eb000000020000000000000000000000000200000064ffffffff000000810000000300000002000001eb0000000100000003000000000000000100000003</ViewHeaderState>
       <UserChangedColumnWidths orientation="horizontal" >true</UserChangedColumnWidths>
-      <CurrentItem>maquina_tb - behavior (C:/Users/Usuario/Desktop/calc_media_arit updated/maquina_tb.vhd)</CurrentItem>
+      <CurrentItem>maquina_tb - behavior (C:/Users/Usuario/Desktop/Media Arit/maquina_tb.vhd)</CurrentItem>
    </ItemView>
    <ItemView engineview="BehavioralSim" sourcetype="" guiview="Process" >
       <ClosedNodes>
@@ -103,7 +104,7 @@
       </SelectedItems>
       <ScrollbarPosition orientation="vertical" >0</ScrollbarPosition>
       <ScrollbarPosition orientation="horizontal" >0</ScrollbarPosition>
-      <ViewHeaderState orientation="horizontal" >000000ff0000000000000001000000010000000000000000000000000000000000000000000000012b000000010000000100000000000000000000000064ffffffff0000008100000000000000010000012b0000000100000000</ViewHeaderState>
+      <ViewHeaderState orientation="horizontal" >000000ff00000000000000010000000100000000000000000000000000000000000000000000000126000000010000000100000000000000000000000064ffffffff000000810000000000000001000001260000000100000000</ViewHeaderState>
       <UserChangedColumnWidths orientation="horizontal" >false</UserChangedColumnWidths>
       <CurrentItem>Design Utilities</CurrentItem>
    </ItemView>
@@ -112,12 +113,12 @@
          <ClosedNodesVersion>1</ClosedNodesVersion>
       </ClosedNodes>
       <SelectedItems>
-         <SelectedItem></SelectedItem>
+         <SelectedItem>ISim Simulator</SelectedItem>
       </SelectedItems>
       <ScrollbarPosition orientation="vertical" >0</ScrollbarPosition>
       <ScrollbarPosition orientation="horizontal" >0</ScrollbarPosition>
       <ViewHeaderState orientation="horizontal" >000000ff00000000000000010000000100000000000000000000000000000000000000000000000126000000010000000100000000000000000000000064ffffffff000000810000000000000001000001260000000100000000</ViewHeaderState>
       <UserChangedColumnWidths orientation="horizontal" >false</UserChangedColumnWidths>
-      <CurrentItem></CurrentItem>
+      <CurrentItem>ISim Simulator</CurrentItem>
    </ItemView>
 </Project>
