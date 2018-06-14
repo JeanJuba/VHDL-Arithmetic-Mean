@@ -71,7 +71,7 @@ LAB6:
 LAB3:    xsi_set_current_line(31, ng0);
     t1 = (t0 + 1832U);
     t2 = *((char **)t1);
-    t1 = (t0 + 7028);
+    t1 = (t0 + 7036);
     t3 = 1;
     if (8U == 8U)
         goto LAB13;
@@ -81,7 +81,7 @@ LAB14:    t3 = 0;
 LAB15:    if (t3 != 0)
         goto LAB10;
 
-LAB12:    xsi_set_current_line(34, ng0);
+LAB12:    xsi_set_current_line(35, ng0);
     t1 = (t0 + 4320);
     t2 = (t1 + 56U);
     t5 = *((char **)t2);
@@ -112,7 +112,7 @@ LAB5:    xsi_set_current_line(27, ng0);
     t11 = *((int *)t7);
     t12 = (t11 - 0);
     t13 = (t12 * 1);
-    xsi_vhdl_check_range_of_index(0, 4, 1, t11);
+    xsi_vhdl_check_range_of_index(0, 5, 1, t11);
     t14 = (8U * t13);
     t15 = (0 + t14);
     t2 = (t6 + t15);
@@ -178,7 +178,7 @@ static void work_a_3276747723_3212880686_p_1(char *t0)
     char *t6;
     char *t7;
 
-LAB0:    xsi_set_current_line(38, ng0);
+LAB0:    xsi_set_current_line(39, ng0);
 
 LAB3:    t1 = (t0 + 1832U);
     t2 = *((char **)t1);
@@ -209,7 +209,7 @@ static void work_a_3276747723_3212880686_p_2(char *t0)
     char *t7;
     char *t8;
 
-LAB0:    xsi_set_current_line(39, ng0);
+LAB0:    xsi_set_current_line(40, ng0);
 
 LAB3:    t1 = (t0 + 1992U);
     t2 = *((char **)t1);

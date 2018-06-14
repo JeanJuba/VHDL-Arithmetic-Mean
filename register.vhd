@@ -14,8 +14,8 @@ architecture Behavioral of reg is
 	signal temp : STD_LOGIC_VECTOR(7  downto 0);
 	
 begin
-process(clock, reset)
-
+process(clock, reset) 
+ 
 begin
 	if reset = '1' then
 		stored <= "00000000";
@@ -23,7 +23,7 @@ begin
 		stored <= input;
 	end if;
 end process;
-	--stored <= temp;
+	
 
 end Behavioral;
 

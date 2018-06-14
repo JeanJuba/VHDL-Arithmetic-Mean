@@ -66,11 +66,11 @@ BEGIN
  
 	-- Instantiate the Unit Under Test (UUT)
    uut: entity work.reg PORT MAP (
-          clk => clk,
+          clock => clk,
           reset => reset,
           set => set,
           input => input,
-          valor => valor
+          stored => valor
         );
 
    -- Clock process definitions
@@ -83,7 +83,7 @@ BEGIN
    end process;
  
 	
-	reset <= '1', '0' after 20 ns;--, '1' after 60 ns, '0' after 80 ns;
+	reset <= '1', '0' after 20 ns, '1' after 80 ns;--, '1' after 60 ns, '0' after 80 ns;
 	set <= '0', '1' after 20 ns;
 	input <= "00010000", "11111111" after 80 ns;
  

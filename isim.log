@@ -9,7 +9,7 @@ Time resolution is 1 ps
 Simulator is doing circuit initialization process.
 at 0 ps, Instance /maquina_tb/uut/op_block/alu_acumulador/ : Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
 Finished circuit initialization process.
-ERROR: Index 5 out of bound 0 to 4. 
+ERROR: Index 6 out of bound 0 to 5. 
 ERROR: In process memoria.vhd:19 
  
 INFO: Simulator is stopped.

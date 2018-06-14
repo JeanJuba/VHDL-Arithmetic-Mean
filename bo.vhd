@@ -13,21 +13,19 @@ entity bo is
 end bo;
 
 architecture Behavioral of bo is
-		
-	--signal temp_mux, signal_acumulador, signal_ula_b, temp_sub : STD_LOGIC_VECTOR(7 downto 0);
 
 	component reg 
     Port (clock 	: in  STD_LOGIC;
 			 set 	: in  STD_LOGIC;   --allow the register value to change
 			 reset 	: in  STD_LOGIC;
 			 input 	: in STD_LOGIC_VECTOR(7 downto 0 ); --the new value to be stored
-			 stored 	: BUFFER  STD_LOGIC_VECTOR(7 downto 0)); --o valor armazenado
+			 stored 	: BUFFER  STD_LOGIC_VECTOR(7 downto 0)); --the stored value
 	end component;
 	
 	component alu 
     Port ( a : in  STD_LOGIC_VECTOR(7 downto 0);
            b : in  STD_LOGIC_VECTOR(7 downto 0);
-           opt : in  STD_LOGIC; -- 0 subtracao  1 soma para poder usar o mem_read
+           opt : in  STD_LOGIC; 
            s : out  STD_LOGIC_VECTOR(7 downto 0));
 	end component;
 	
@@ -72,23 +70,22 @@ architecture Behavioral of bo is
 	signal signal_acumulador, mux_counter_mem_out, mux_result_counter_out, adder_out_c, adder_out_r : STD_LOGIC_VECTOR(7 downto 0) :=  "00000000";
 	signal not_memoria_lida, compare_zero_out, compare_out, compare_or_out : STD_LOGIC;
 begin
-	
-	--negador : not_logic port map (memoria_lida, not_memoria_lida);
-	
-	registrador_acumulador : reg port map (clk, set_acumulador,  reset, signal_acumulador , buffer_acumulador);  --Registrador responsável pelo valor acumulado da soma e subtração
-	registrador_counter   :  reg port map (clk,  set_counter,     reset, adder_out_c, buffer_counter);  --Registrador que conta os itens
-	registrador_result    :  reg port map (clk,  set_resultado,   reset, adder_out_r, buffer_result);   --Registra o número de divisões bem sucedidas
-	
-	mux_counter_mem    : mux port map (buffer_counter, valor_memoria, memoria_lida, mux_counter_mem_out);    --mem_read = 0 counter mem_read = 1 memory value
+		
+	registrador_acumulador : reg port map (clk, set_acumulador,  reset_acumulador, signal_acumulador , buffer_acumulador);  --Registrador responsável pelo valor acumulado da soma e subtração
+	registrador_counter   :  reg port map (clk,  set_counter,     reset_counter, adder_out_c, buffer_counter);  --Registrador que conta os itens
+	registrador_result    :  reg port map (clk,  set_resultado,   reset_resultado, adder_out_r, buffer_result);   --Registra o número de divisões bem sucedidas
+	 
+	mux_counter_mem    : mux port map (buffer_counter, valor_memoria, memoria_lida, mux_counter_mem_out); 
 		
 	alu_acumulador     : alu port map (buffer_acumulador, mux_counter_mem_out, memoria_lida, signal_acumulador); --deverá fazer acum + valor mem ou acum - counter
 	add_counter        : adder port map (buffer_counter, adder_out_c); --Adiciona 1 ao valor do counter de valores ou de divisões sendo isso definido pelo mux
-	add_result         : adder port map (buffer_result, adder_out_r);
+	add_result         : adder port map (buffer_result, adder_out_r);  --Adiciona 1 ao valor do counter de divisões possíveis
 	
-	compare_zero : comparator_zero port map (buffer_counter   , compare_zero_out);
-	compare      : comparator 	   port map (buffer_acumulador, buffer_counter   , compare_out);
-	compare_or   : comparator_or   port map (compare_out      , compare_zero_out , result_ready);
+	--compare_zero : comparator_zero port map (buffer_counter   , compare_zero_out);
+	compare      : comparator 	   port map (buffer_acumulador, buffer_counter   , result_ready);
+	--compare_or   : comparator_or   port map (compare_out      , compare_zero_out , result_ready);
 	
 	resultado <= buffer_result;
+	
 end Behavioral;
 

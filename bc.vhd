@@ -20,15 +20,6 @@
 library IEEE;
 use IEEE.STD_LOGIC_1164.ALL;
 
--- Uncomment the following library declaration if using
--- arithmetic functions with Signed or Unsigned values
---use IEEE.NUMERIC_STD.ALL;
-
--- Uncomment the following library declaration if instantiating
--- any Xilinx primitives in this code.
---library UNISIM;
---use UNISIM.VComponents.all;
-
 entity bc is
     Port ( clock, reset : in STD_LOGIC; -- reset que inicia setado para colocar o estado em START
 			  memoria_vazia : in STD_LOGIC;
@@ -83,7 +74,8 @@ architecture Behavioral of bc is
 			
 				when SUBTRACT =>
 						estado <= CHECK_MEMORY_RESULT;
-						
+				
+				
 				end case;
 		end if;
 	end process;
@@ -101,6 +93,7 @@ architecture Behavioral of bc is
 				reset_resultado <= '1';
 				enviar <= '0';
 				memoria_lida <= '0';
+				
 			
 			when REQUEST =>
 				set_acumulador <= '0';
@@ -111,7 +104,8 @@ architecture Behavioral of bc is
 				reset_resultado <= '0';
 				enviar <= '1';
 				memoria_lida <= '0';
-
+				
+				
 			when CHECK_MEMORY =>
 				set_acumulador <= '0';
 				reset_acumulador <= '0';
@@ -121,7 +115,8 @@ architecture Behavioral of bc is
 				reset_resultado <= '0';
 				enviar <= '0';
 				memoria_lida <= '0';
-
+				
+				
 			when SUM =>
 				set_acumulador <= '1';
 				reset_acumulador <= '0';
@@ -153,6 +148,8 @@ architecture Behavioral of bc is
 				enviar <= '0';
 				memoria_lida <= '0';			
 				
+			
+			
 		end case;
 	end process;
 

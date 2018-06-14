@@ -11,14 +11,14 @@ ARCHITECTURE behavior OF maquina_tb IS
    signal reset : std_logic;
 
  	--Outputs
-	signal valor_memoria : std_logic_vector(7 downto 0);
-	signal memoria_vazia, enviar : std_logic;
-   signal buffer_acumulador : std_logic_vector(7 downto 0);
-   signal buffer_counter : std_logic_vector(7 downto 0);
-   signal buffer_resultado : std_logic_vector(7 downto 0);
+	--signal valor_memoria : std_logic_vector(7 downto 0);
+	--signal memoria_vazia, enviar : std_logic;
+   --signal buffer_acumulador : std_logic_vector(7 downto 0);
+   --signal buffer_counter : std_logic_vector(7 downto 0);
+   --signal buffer_resultado : std_logic_vector(7 downto 0);
 	signal resultado_pronto : std_logic;
-	signal set_acumulador,   set_counter,   set_resultado : std_logic := '0';
-	signal reset_acumulador, reset_counter, reset_resultado : std_logic := '1';
+	--signal set_acumulador,   set_counter,   set_resultado : std_logic := '0';
+	--signal reset_acumulador, reset_counter, reset_resultado : std_logic := '1';
 	signal resultado : std_logic_vector(7 downto 0);
    -- Clock period definitions
    constant clock_period : time := 20 ns;
@@ -29,19 +29,19 @@ BEGIN
    uut: entity work.maquina PORT MAP (
           clock => clock,
           reset => reset,
-			 valor_memoria => valor_memoria,
-			 memoria_vazia => memoria_vazia,
-          buffer_acumulador => buffer_acumulador,
-          buffer_counter    => buffer_counter,
-          buffer_resultado  => buffer_resultado,
+			 --valor_memoria => valor_memoria,
+			 --memoria_vazia => memoria_vazia,
+          --buffer_acumulador => buffer_acumulador,
+          --buffer_counter    => buffer_counter,
+          --buffer_resultado  => buffer_resultado,
 			 resultado_pronto => resultado_pronto,
-			 set_acumulador => set_acumulador,
-			 reset_acumulador => reset_acumulador,
-			 set_counter => set_counter,
-			 reset_counter => reset_counter,
-			 set_resultado => set_resultado,
-			 reset_resultado => reset_resultado,
-			 enviar => enviar,
+			 --set_acumulador => set_acumulador,
+			 --reset_acumulador => reset_acumulador,
+			 --set_counter => set_counter,
+			 --reset_counter => reset_counter,
+			 --set_resultado => set_resultado,
+			 --reset_resultado => reset_resultado,
+			 --enviar => enviar,
           resultado => resultado
         );
 

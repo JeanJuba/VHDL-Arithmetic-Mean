@@ -2,29 +2,29 @@ Command line:
    maquina_tb_isim_beh.exe
      -simmode  gui
      -simrunnum  0
-     -socket  50671
+     -socket  50707
 
-Wed Jun 13 20:51:00 2018
+Wed Jun 13 21:04:02 2018
 
 
- Elaboration Time: 0.0468 sec
+ Elaboration Time: 0.046801 sec
 
  Current Memory Usage: 505.647 Meg
 
- Total Signals          : 127
- Total Nets             : 163
- Total Signal Drivers   : 36
- Total Blocks           : 18
- Total Primitive Blocks : 15
- Total Processes        : 28
+ Total Signals          : 101
+ Total Nets             : 147
+ Total Signal Drivers   : 25
+ Total Blocks           : 16
+ Total Primitive Blocks : 13
+ Total Processes        : 17
  Total Traceable Variables  : 12
- Total Scalar Nets and Variables : 582
+ Total Scalar Nets and Variables : 574
 In process memoria.vhd:19 
  
 
- Total Simulation Time: 0.0468 sec
+ Total Simulation Time: 0.062401 sec
 
  Current Memory Usage: 505.647 Meg
 
-Wed Jun 13 20:51:10 2018
+Wed Jun 13 21:04:13 2018
 

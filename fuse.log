@@ -1,12 +1,10 @@
-Running: C:\Xilinx\14.2\ISE_DS\ISE\bin\nt64\unwrapped\fuse.exe -intstyle ise -incremental -o C:/Users/Usuario/Desktop/Media Arit/maquina_tb_isim_beh.exe -prj C:/Users/Usuario/Desktop/Media Arit/maquina_tb_beh.prj work.maquina_tb 
+Running: C:\Xilinx\14.2\ISE_DS\ISE\bin\nt64\unwrapped\fuse.exe -intstyle ise -incremental -o C:/Users/Usuario/Desktop/Media Arit/maquina_tb_isim_beh.exe -prj C:/Users/Usuario/Desktop/Media Arit/maquina_tb_beh.prj maquina_tb 
 ISim P.28xd (signature 0xa0883be4)
 Number of CPUs detected in this system: 4
 Turning on mult-threading, number of parallel sub-compilation jobs: 8 
 Determining compilation order of HDL files
 Parsing VHDL file "C:/Users/Usuario/Desktop/Media Arit/register.vhd" into library work
 Parsing VHDL file "C:/Users/Usuario/Desktop/Media Arit/mux.vhd" into library work
-Parsing VHDL file "C:/Users/Usuario/Desktop/Media Arit/comparator_zero.vhd" into library work
-Parsing VHDL file "C:/Users/Usuario/Desktop/Media Arit/comparator_or.vhd" into library work
 Parsing VHDL file "C:/Users/Usuario/Desktop/Media Arit/comparator.vhd" into library work
 Parsing VHDL file "C:/Users/Usuario/Desktop/Media Arit/alu.vhd" into library work
 Parsing VHDL file "C:/Users/Usuario/Desktop/Media Arit/adder.vhd" into library work
@@ -27,15 +25,13 @@ Compiling architecture behavioral of entity reg [reg_default]
 Compiling architecture behavioral of entity mux [mux_default]
 Compiling architecture behavioral of entity alu [alu_default]
 Compiling architecture behavior of entity adder [adder_default]
-Compiling architecture behavioral of entity comparator_zero [comparator_zero_default]
 Compiling architecture behavioral of entity comparator [comparator_default]
-Compiling architecture behavioral of entity comparator_or [comparator_or_default]
 Compiling architecture behavioral of entity bo [bo_default]
 Compiling architecture behavioral of entity maquina [maquina_default]
 Compiling architecture behavior of entity maquina_tb
 Time Resolution for simulation is 1ps.
-Waiting for 9 sub-compilation(s) to finish...
-Compiled 27 VHDL Units
+Waiting for 7 sub-compilation(s) to finish...
+Compiled 23 VHDL Units
 Built simulation executable C:/Users/Usuario/Desktop/Media Arit/maquina_tb_isim_beh.exe
-Fuse Memory Usage: 34008 KB
-Fuse CPU Usage: 545 ms
+Fuse Memory Usage: 33960 KB
+Fuse CPU Usage: 561 ms
